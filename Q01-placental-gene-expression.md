@@ -4,7 +4,17 @@
 
 ## Cohort and contrasts
 
-Use the GSE203507 core villous counts. The primary contrast is `EOPE` without FGR (8 donors) versus idiopathic preterm birth, `iPTB` (5). The shared 29.857–33.000-week delivery window contains 5 cases and all 5 controls. Keep `EOPE+FGR` (7), isolated `FGR` (5), and term births, `TB` (5), visible as distinct groups. Only 2 of the 7 combined cases fall within the isolated-FGR group’s delivery-age range. [Core counts](openbio-datathon-2026/track-01/data/track01_counts_vt.csv) · [Villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv)
+Use the GSE203507 core villous counts. Keep `EOPE+FGR` (7), isolated `FGR` (5), and term births, `TB` (5), visible as distinct groups. Only 2 of the 7 combined cases fall within the isolated-FGR group’s delivery-age range. [Core counts](openbio-datathon-2026/track-01/data/track01_counts_vt.csv) · [Villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv)
+
+### Primary comparison decision
+
+**November 14, 2026.** Compare placental villous RNA at delivery in **8 pregnancies with early-onset preeclampsia without fetal growth restriction (`EOPE`) versus 5 pregnancies with spontaneous idiopathic preterm birth (`iPTB`)**. Use the **5-vs.-5 subset** within **29.857–33.000 weeks** (29 weeks 6 days through 33 weeks) for delivery-age sensitivity.
+
+**Why this cohort.** Both groups delivered preterm and had no diagnosed FGR, which can carry its own placental expression changes. The iPTB delivery-age range contains five of eight EOPE pregnancies without FGR and all five iPTB controls. Only one of seven EOPE+FGR pregnancies falls in that window, so pooling both EOPE groups would change the case mix when restricting by age. The five term births delivered at 39.0–39.4 weeks, beyond the delivery age of every EOPE case. [Villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv) · [Delivery-timing audit](Q06-delivery-timing.md)
+
+**What PCA added.** The organizer-style `log2(CPM + 1)` PCA showed a broad shift along PC1 between EOPE without FGR and iPTB after removing term births. The shift was visible again when fitting PCA on the 8-vs.-5 comparison and on the 5-vs.-5 subset. PC1 explained **25.1%** and **29.3%** of within-fit expression variation, respectively. Four of five iPTB controls fell below the EOPE range on PC1 in both fits. The fifth, S24, overlapped it. Seeing a group-level shift in both fits modestly strengthens the case for testing this comparison at the gene level. [Preterm PCA](PCA/results/preterm/README.md) · [Full comparison PCA](PCA/results/eope_vs_iptb/README.md) · [Shared-age PCA](PCA/results/shared_age/README.md)
+
+**What to carry into the analysis.** PC2 correlated with log gene-assigned read depth in the full and shared-age fits (absolute Pearson `r = 0.87` and `0.86`). S22, the lowest-depth pregnancy in the comparison, lay at a PC2 extreme in both. Check sequencing QC and donor influence, then compare gene-level effect estimates and intervals across the unadjusted and delivery-age-adjusted 8-vs.-5 fits and the 5-vs.-5 sensitivity fit. Interpret those estimates as associations relative to spontaneous iPTB at delivery, where labor and delivery context may also contribute. [PCA results](PCA/README.md)
 
 ## Analysis
 
