@@ -15,3 +15,11 @@
 Show sample structure and age overlap, donor-level effects for both programs, and an atlas-backed cell-state and tissue panel. A robust decidual EVT-state effect alongside villous stress would support compartment-specific associations at delivery. A weak EVT signal would leave the implantation-site hypothesis unresolved. Independent spatial samples could test EVT density and RNA per identified cell near maternal arteries. Testing whether a signature precedes PE requires early samples linked to later outcomes.
 
 Planning chat: “Map Preeclampsia Changes.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The morning review verified the paired-tissue option in the released data. Decidua is available for **27 of 30** pregnancies, including all **ten donors** in the primary 5-vs.-5 villous comparison. The three missing decidua samples, S01–S03, are all EOPE+FGR. For a tissue comparison, use the same donors in both tissues and use a donor-paired tissue-by-disease contrast if claiming that effects differ between tissues. [Released decidua dictionary](openbio-datathon-2026/track-01/data/track01_data_dictionary.md#extension-decidua-basalis)
+
+For the proposed [Q1-led submission](Q01-placental-gene-expression.md), add a paired tissue check only if localization to the implantation site matters to the hypothesis. Use healthy atlases for cell identity, anatomy, and developmental context. The paired RNA measurements describe tissue collected at delivery. An early-pregnancy claim would need samples from that stage linked to later outcomes.

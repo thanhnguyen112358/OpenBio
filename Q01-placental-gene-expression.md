@@ -19,3 +19,13 @@ Use the GSE203507 core villous counts. The primary contrast is `EOPE` without FG
 Build four figures covering delivery age and PCA, effect sizes across the three primary fits, donor-level expression and pathway patterns across all groups, and cell localization of three result genes. Center the hypothesis card on the pattern with the most stable effect sizes. Agreement with Ackerman benchmarks reproduces findings from the source cohort. For an external comparison, audit tissue and control comparability in GSE114691, which Ackerman also used. A claim about soluble sFLT1 requires isoform-specific RNA or protein measurements. [GSE114691](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114691)
 
 Planning chat: “Placental Gene Expression Analysis.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The initial plan already used the released villous data and proposed four figures. The morning review verified the **8 EOPE without FGR vs. 5 iPTB** primary contrast and **5 vs. 5** shared-age subset (29.857–33.000 weeks). The updated submission guide asks for a general-audience article, so this is the proposed main question and the figures should carry one coherent story. [Released data dictionary](openbio-datathon-2026/track-01/data/track01_data_dictionary.md) · [Updated submission guide](openbio-datathon-2026/track-01/4-submit.md)
+
+- Report the full unadjusted fit alongside the delivery-age-adjusted fit on the same 13 donors and the unadjusted 5-vs.-5 fit. Use [Q6](Q06-delivery-timing.md) for comparator context, with the term contrast clearly labeled as having no delivery-age overlap. Prespecify the comparison and thresholds before inspecting the gene results.
+- Export four distinct graphs for the article. Show delivery-age overlap, sample PCA, effect sizes and intervals across the fits, and donor-level expression for the lead finding. Pick the headline graph after seeing the results. Save it as `figures/headline.png` for the article and video.
+- Use [Q9](Q09-baseline-gene-localization.md) to record the three required browser lookups and explain what they suggest about cell source. Build the hypothesis card from the observed result, a plausible mechanism, an alternative such as cell mix or delivery timing, and a follow-up that could falsify it. Cite the studies behind the mechanism.

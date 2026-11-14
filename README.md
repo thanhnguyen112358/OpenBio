@@ -35,3 +35,11 @@ git -C openbio-datathon-2026 pull --ff-only
 ```
 
 For data and software setup, follow the organizers’ [Track 1 setup guide](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/main/track-01/1-setup.md).
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The November 14 morning checkout review found that the organizer had released the Track 1 data package and revised the submission guide since the initial event notes. The working recommendation is [Q1](Q01-placental-gene-expression.md) as the main analysis, [Q6](Q06-delivery-timing.md) for delivery-timing sensitivity, and [Q9](Q09-baseline-gene-localization.md) for cell-source interpretation. Each question plan has its own dated review. [Review and submission checklist](Thanh/docs/track-1-preparation.md#november-14-2026-morning-review)
+
+Submit by **Sunday, November 15 at 6:00 p.m. EST** via Devpost or a pull request to the official repo. The package includes runnable code and a README, an article with at least four graphs, an unlisted video of up to five minutes, a headline visual reused in the article and video, the analysis plan, and a hypothesis card. [Official submission instructions](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e9/submissions/README.md)

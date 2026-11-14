@@ -119,3 +119,11 @@ For each candidate, complete these sentences before choosing an analysis:
 7. A follow-up experiment that could disprove our explanation is ...
 
 Choose the question after inspecting the released sample dictionary and group sizes. Background reading should guide the hypothesis while leaving room for the data to contradict it.
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The first pass suggested Q1, Q5, or Q6 plus Q9, then deferred the choice until the released metadata could be checked. The morning review supports a narrower first pass for the new four-graph article and short video. Lead with **Q1** (EOPE without FGR vs. iPTB, **8 vs. 5**), use **Q6** for the delivery-age-adjusted and **5-vs.-5** shared-age checks, and use **Q9** for three documented gene-browser lookups. [Q1](../../Q01-placental-gene-expression.md) · [Q6](../../Q06-delivery-timing.md) · [Q9](../../Q09-baseline-gene-localization.md) · [Article guide](../../openbio-datathon-2026/docs/article-guide.md)
+
+**Q5** is the focused alternative if the team is most interested in fetal growth. Its within-EOPE comparison retains **4 vs. 7** in the shared-age subset. For **Q3, Q4, Q7, and Q8**, let the primary result justify a targeted follow-up. The early arm has three controls and some classes have even fewer. **Q10** can use both tissues for all ten donors in its primary comparison. The healthy atlas can help interpret the delivery-stage result by placing genes in their normal cell and tissue context. [Released data dictionary](../../openbio-datathon-2026/track-01/data/track01_data_dictionary.md) · [Q10 paired plan](../../Q10-healthy-early-pregnancy-atlas.md)

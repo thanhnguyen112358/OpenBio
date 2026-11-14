@@ -114,3 +114,13 @@ The organizer's dated event website supports the November 14–15 format; the No
 Record six things: clinical question; tissue and pregnancy stage; comparison groups; proposed mechanism; evidence supporting it; and the claim the experiment cannot establish. Separate the paper's conclusion from your interpretation. Read methods and figures before borrowing an analysis or asserting a mechanism.
 
 The source screening for this roadmap used organizer guides, the RCOG clinical page, the Maynard article, and abstracts/metadata for the selected atlas and disease studies. The reading assignments call for deeper figure- and methods-level study; that study is not represented as completed here.
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The first read used the source papers to define plausible mechanisms and left the usable sample fields to the release. The morning review confirmed that v1.0.0 provides 30 villous profiles, 27 paired decidua profiles, and separate donor-level Admati pseudobulk. Start by asking which tissue, developmental stage, and unit of replication each one represents. [Released data dictionary](../../openbio-datathon-2026/track-01/data/track01_data_dictionary.md)
+
+For the proposed first analysis, use the early PE without FGR vs. preterm control contrast at delivery. Its shared-age sensitivity contains **5 cases and 5 controls**. Use cell localization to interpret one lead result and consider paired decidua if the implantation site is central to that interpretation. Healthy early reference tissue supplies anatomical and developmental context. A delivered-placenta RNA pattern can motivate a hypothesis about earlier biology that would require early samples to test. [Q1](../../Q01-placental-gene-expression.md) · [Q10](../../Q10-healthy-early-pregnancy-atlas.md)
+
+The November 15 study output now includes the public-facing article, at least four graphs, the short recording, and a cited hypothesis card. Connect the observation to a proposed mechanism, name an alternative, and describe an experiment or analysis that could disprove the hypothesis. [Updated submission guide](../../openbio-datathon-2026/track-01/4-submit.md)

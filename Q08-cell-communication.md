@@ -15,3 +15,11 @@
 Use two figures for cohort coverage and aligned trophoblast–endothelial effects. A robust shift in both classes supports a candidate angiogenic mechanism, with shared placental stress as a competing explanation. A robust SCT shift with uncertain receiver effects supports a trophoblast association and leaves local communication unresolved. A follow-up could measure soluble `FLT1` isoforms, secreted sFLT1, and available VEGF/PlGF, then ask whether a trophoblast-derived signal changes placental endothelial VEGFR2 activity and whether restoring ligand availability reverses it.
 
 Planning chat: “Gene Communication Analysis.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The morning review verified that syncytiotrophoblast and placental endothelium each retain all 26 donors at the proposed 20-cell floor. Early PE still has only three controls, and EVT retains only one early control at that floor. The released profiles provide a feasible targeted check if the [Q1 villous analysis](Q01-placental-gene-expression.md) points to an angiogenic mechanism. [Released profile metadata](openbio-datathon-2026/track-01/data/extension/pseudobulk/track01_pseudobulk_metadata.csv)
+
+Keep the first pass to the prespecified trophoblast–endothelial axis. Show paired donor RNA values and a defined endothelial response, with shared placental stress as a competing explanation. Gene-level `FLT1` RNA measures transcript abundance. Isoform abundance, secreted protein, and receptor activity would require separate measurements. If Q8 leads, keep the required core and browser lookups in the story. The two original figure proposals can become four graphs by plotting age or coverage, trophoblast RNA, endothelial response, and donor-aligned evidence separately. [Updated submission guide](openbio-datathon-2026/track-01/4-submit.md)

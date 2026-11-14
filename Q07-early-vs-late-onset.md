@@ -20,3 +20,11 @@ For each cell class, estimate `PE_early − control_early`, `PE_late − control
 Show cohort coverage and delivery context, paired early and late effects with their direct difference, and the SCT donor values. Record at least three browser lookups as localization checks from the Admati study. If estimates align and the interval on their difference is broad, report a possible shared response with uncertain magnitude. A stable direct difference motivates independent spatial RNA follow-up with documented diagnosis week and overlapping delivery circumstances. Maternal sFLT1 and PlGF protein measures could connect a placental angiogenic result to a circulating signal. [Browser guide](openbio-datathon-2026/track-01/data/interpretation/zeisel_browser_guide.md)
 
 Planning chat: “Preeclampsia Pseudobulk Strategy.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The morning review confirmed that the 26 pseudobulk donors include **10 early cases and 3 early controls**, and **7 late cases and 6 late controls**. The villous core contains EOPE only. The extension's weeks field records delivery, and the clinical onset labels define the strata. [Released donor table](openbio-datathon-2026/track-01/data/extension/pseudobulk/track01_pseudobulk_donors.csv) · [Organizer starter questions](openbio-datathon-2026/track-01/starter-questions.md)
+
+Treat Q7 as an optional extension to the required villous analysis. If pursued, start with one well-covered class and keep the original direct contrast between the two case–control effects. Report its interval and the leave-one-early-control-out results alongside the two stratum estimates. That interval is the evidence for an onset-related difference. Keep the sparse early control coverage and delivery context explicit.

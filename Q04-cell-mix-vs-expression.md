@@ -14,3 +14,11 @@
 Pair a recovered-fraction figure with a within-class expression figure and corresponding bulk effects. If fraction and identity markers shift while within-class estimates are small and precise, composition is plausible. If within-class SCT effects survive, a class-average expression shift is supported. If Hofbauer expression and fraction move in opposite directions, the two effects could partly offset in tissue RNA. Measure SCT coverage and RNA per unit of the layer in the same tissue sections from independent age- and delivery-context-comparable donors to distinguish those explanations.
 
 Planning chat: “Preeclampsia Placental Cell Analysis.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The released donor totals and class map let us reproduce the recovered fractions in the initial plan. The early arm has 10 cases and 3 controls. Use all recovered cells for each donor's fraction denominator and apply the cell-count floor only to within-class expression fits. An absent class contributes a zero recovered fraction and has undefined within-class expression. [Pseudobulk file definitions](openbio-datathon-2026/track-01/data/track01_data_dictionary.md#extension-single-cell-pseudobulk)
+
+If the [Q1 bulk result](Q01-placental-gene-expression.md) points to a specific class, compare that class's recovered fraction and expression in matched Admati donors. Use Ackerman villous RNA as a separate tissue-level comparison. The fractions describe cells recovered by the assay. A shift in a broad-class RNA profile can also reflect a shift among its subtypes. Keep those two explanations visible in the hypothesis card, along with the small early-control group.

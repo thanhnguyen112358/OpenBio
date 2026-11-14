@@ -33,3 +33,16 @@ The repository's [schedule](https://github.com/Harvard-Undergraduate-OpenBio/ope
 Search-engine copies of the repository showed an older single-cell-centered challenge. The live repository at commit `36257c75bf43a265174576c9251004ba8fdf2704` confirms the bulk-centered Track 1 guide. Preparation notes use that live version.
 
 Organizer contact: [exec@harvardopenbio.org](mailto:exec@harvardopenbio.org).
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The November 10 brief left submission time, presentation arrangements, team size, and several logistics details open. The official repo's morning version and the dated event schedule now specify the following.
+
+- **Saturday, November 14 in Cambridge.** Check-in starts at 8:30 a.m. The welcome begins at 9:30 a.m., the challenge briefing starts at 10:15 a.m., and final team and track selections are due at 12:30 p.m. [Organizer schedule](https://www.openbiolab.org/openbio-datathon#event-schedule)
+- **Sunday, November 15 online.** Submit by **6:00 p.m. EST** through Devpost or a pull request. The presentation is a recording of five minutes or less, with every team member appearing or speaking at least once. Upload it as an unlisted YouTube video and link it in the team README. [Track 1 submission guide](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e9/track-01/4-submit.md) · [Submission routes](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e9/submissions/README.md)
+- **Eligibility and team size.** The current repo FAQ includes undergraduate and graduate students at Harvard and affiliated institutions. It calls three ideal and accepts two or four. Luma describes a broader audience, so ask organizers if eligibility remains uncertain for a particular participant. [Organizer FAQ](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e9/docs/faq.md) · [Luma listing](https://luma.com/8iq9qh08)
+- **Help.** The repository directs teams to datathon Slack during the event and gives `openbiolaboratory@gmail.com` for questions before or after the event and for accommodations. [Support guide](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e9/docs/support.md)
+
+The Track 1 files are already available in the repo. Registration, team membership, and any rules on pre-kickoff work or AI assistance still need confirmation if relevant. [Data package](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/tree/e5d6c0f/track-01/data)

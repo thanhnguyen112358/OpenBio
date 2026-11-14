@@ -14,3 +14,11 @@
 Build two figures for the bulk signature and its robustness, then the control-expression heatmap with signed bulk effects and the matched-null comparison. Label row scaling and show donor coverage. Repeated SCT peaks across references would support a trophoblast-enriched component. Specificity near the matched background would favor broader localization across the sampled classes. If peak class changes with gestational stage or assay, report that dependence and check tissue location in a spatial atlas. For a well-localized hit, use [Q3](Q03-cell-class-differences.md) to test the within-class disease response and [Q4](Q04-cell-mix-vs-expression.md) to assess composition.
 
 Planning chat: “Preeclampsia Gene Localization Plan.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The updated Track 1 instructions still require at least three gene-browser lookups. For a [Q1-led submission](Q01-placental-gene-expression.md), use the browser portion of this plan as the interpretation step. Log each query symbol, observed cell classes, and the control or reference view used. Distinguish baseline localization from group differences so the observation supports a specific hypothesis. [Browser guide](openbio-datathon-2026/track-01/data/interpretation/zeisel_browser_guide.md)
+
+Use the released HGNC table to align bulk source symbols with reference symbols, and record ambiguous or duplicate mappings before comparing gene sets. The early controls provide three profiles in each of the five priority classes at the proposed 20-cell floor and only one EVT profile. An atlas can add EVT context. Keep the specificity score and matched gene-set analysis for follow-up if cell localization becomes the main question. [Released gene annotation and pseudobulk dictionary](openbio-datathon-2026/track-01/data/track01_data_dictionary.md)

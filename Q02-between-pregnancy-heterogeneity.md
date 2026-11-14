@@ -15,3 +15,11 @@
 Prepare three figures for delivery-age overlap and PCA, the four preterm contrasts with intervals, and the paired angiogenic and metabolic profiles. Recurring angiogenic shifts with widely varying metabolic scores would support two partly independent features of this cohort. A coherent rise in both programs across most cases would favor a shared program of varying magnitude. If the pattern follows age or hinges on one donor, show the sensitivity directly. An independent cohort with blinded pathology could test whether a high metabolic score tracks maternal vascular malperfusion among pregnancies with similar delivery age and FGR status.
 
 Planning chat: “Synthesize Preeclampsia Genetics.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The morning review checked the age support behind the original four-group analysis. The shared iPTB delivery-age window contains six of 15 EOPE cases, including only one EOPE+FGR donor. That limits what the four-group model can establish about why donor profiles vary. [Released villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv)
+
+For the proposed [Q1-led submission](Q01-placental-gene-expression.md), use one Q2 donor-level figure to show whether the lead RNA signal recurs across pregnancies. Keep group, FGR, and delivery age visible. If a metabolic ratio helps answer that question, show its numerator and denominator as well. Save the four-group interaction for exploratory follow-up. If Q2 becomes the main question, the original three planned figures need a fourth graph for the article. Separating delivery-age overlap from PCA gives each graph a clear purpose. [Updated submission guide](openbio-datathon-2026/track-01/4-submit.md)

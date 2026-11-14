@@ -14,3 +14,11 @@
 Use a donor-coverage figure, signed class-by-pathway heatmaps for each onset contrast, and donor plots for the lead result. Report which class ranks highly under the prespecified metric and where the evidence becomes donor-sensitive. A large early estimate and an imprecise late estimate call for the direct comparison in [Q7](Q07-early-vs-late-onset.md). If the SCT pattern holds, quantify SCT coverage and `FLT1`/`PGF` signal within identified SCT regions in independent placentas with overlapping delivery ages and modes. Those measurements address tissue abundance and expression within the layer.
 
 Planning chat: “Placental Cell Differences Analysis.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The released class map and donor table make the original ranking auditable. A check at a 20-cell floor found 7 late cases and 6 late controls for syncytiotrophoblast, villous cytotrophoblast, endothelium, stroma, and Hofbauer cells. EVT retained only 2 late controls and 1 early control. The floor is a proposed analysis choice, with other cutoffs available as sensitivity checks. [Released pseudobulk dictionary](openbio-datathon-2026/track-01/data/track01_data_dictionary.md#extension-single-cell-pseudobulk)
+
+For a [Q1-led submission](Q01-placental-gene-expression.md), reserve the full class ranking for follow-up and use at most one well-covered class to examine a bulk signal. If Q3 leads, pair the late-onset ranking with the required villous core and three browser lookups. Report donors per class and see whether the leading class survives the cell-count threshold and a common donor set where feasible. Show EVT descriptively. Browser and pseudobulk evidence here trace to the same Admati study. [Track 1 overview](openbio-datathon-2026/track-01/README.md)

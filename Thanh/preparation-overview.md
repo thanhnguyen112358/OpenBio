@@ -20,3 +20,11 @@ Use organizer websites and the current organizer repository as primary sources. 
 Registration, team membership, preferred analysis language, and prior RNA-seq experience have not yet been established. Preparation notes do not imply that software is installed or that an analysis has run.
 
 Last researched: November 10, 2026, America/New_York.
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The organizer's November 14 morning repo updates resolved the main release and submission questions recorded on November 10. Track 1 v1.0.0 is available and passed the local file checksum check. The article, four-graph minimum, recording, and submission deadline now belong in the work plan. [Updated Track 1 checklist](docs/track-1-preparation.md#november-14-2026-morning-review) · [Event brief update](docs/event-brief.md#november-14-2026-morning-review)
+
+The biology-first preparation now supports starting with [the Q1 villous contrast](../Q01-placental-gene-expression.md), testing its sensitivity to delivery timing, and tying the lead RNA finding to plausible cell sources. The [question review](docs/questions-biological-context.md#november-14-2026-morning-review) records the metadata behind that recommendation. The review checked released metadata and file integrity. Differential expression and biological findings remain to be established.

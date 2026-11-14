@@ -25,3 +25,11 @@ Define pooled `PE` from `EOPE` and `EOPE+FGR` while preserving the original five
 Present age overlap, PCA, and a side-by-side effect plot. Report which signals weaken, persist, or become imprecise under each comparison. To test whether the strongest signals recur, use an independent cohort with overlapping delivery ages and documented labor, delivery indication, and FGR. Audit those fields before using GSE114691. [GSE114691](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114691)
 
 Planning chat: “Compare Delivery Timing Effects.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The morning review verified the original pooled comparison. PE and term controls have no delivery-age overlap. The pooled PE vs. iPTB window retains **6 vs. 5** donors, including only **one** EOPE+FGR case. Restricting the pooled analysis therefore changes case composition as well as age support. [Released villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv)
+
+For the recommended [Q1-led analysis](Q01-placental-gene-expression.md), keep EOPE without FGR as the case definition for the main **8-vs.-5** comparison and **5-vs.-5** overlap sensitivity. Show the age-adjusted fit alongside the unadjusted fit on the same donors so readers can distinguish model adjustment from donor restriction. Use Q6's term contrast to illustrate how estimates vary with the comparator. The change can reflect maturation, delivery context, or case mix. Show effect sizes and intervals across fits so attenuation and loss of precision are distinguishable.

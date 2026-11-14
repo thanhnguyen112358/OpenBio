@@ -25,3 +25,11 @@ Use the released `fgr_status` and `group` labels. The core provides birthweight 
 Show age overlap and PCA, donor-level pathway scores, and cross-contrast effects with cell context. A concordant within-EOPE and isolated-FGR shift supports a candidate shared FGR response. Similar effects in both EOPE groups would favor an EOPE-associated program, with the within-EOPE interval defining how much FGR effect remains plausible. For a hypoxia result, test a fixed panel against antenatal Doppler and blinded placental pathology in another cohort. For an angiogenic result, pair isoform-specific `FLT1` with maternal sFLT1 and PlGF protein measures.
 
 Planning chat: “Placental Analysis Plan.” [OpenBio index](Thanh/README.md)
+
+## November 14, 2026 morning review
+
+Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).
+
+The released metadata confirms the original within-EOPE comparison of **7 EOPE+FGR vs. 8 EOPE** donors. Its shared delivery-age range retains **4 vs. 7**. For isolated FGR vs. iPTB the overlap retains only **2 vs. 1**, so that fit provides directional context with substantial uncertainty. The release provides clinical FGR labels and birthweight bins for the preterm groups. Preserve the clinical labels and log relevant QC flags for sensitivity checks. [Released villous metadata](openbio-datathon-2026/track-01/data/track01_metadata_vt.csv) · [Data dictionary](openbio-datathon-2026/track-01/data/track01_data_dictionary.md)
+
+Use Q5 as the main plan if fetal growth is the team's chosen question. Lead with the within-EOPE hypoxia result across the full and overlap fits. For the updated article, export age overlap, PCA, donor-level hypoxia values, and signed effects across contrasts as four separate graphs. If [Q1](Q01-placental-gene-expression.md) leads, use Q5 as context for interpreting a possible FGR-related pattern. [Updated submission guide](openbio-datathon-2026/track-01/4-submit.md)
