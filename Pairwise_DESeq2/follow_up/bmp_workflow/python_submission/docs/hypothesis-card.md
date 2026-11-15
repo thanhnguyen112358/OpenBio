@@ -1,0 +1,11 @@
+# Higher villous BMP RNA may accompany altered BMP signaling inside specific cells
+
+**Clinical question.** Does the villous RNA difference associated with EOPE among pregnancies with FGR reflect a change in signaling within placental cell types?
+
+**Observation.** Relative to isolated FGR, the mean BMP RNA score was +0.273 log₂ units in OpenBio and +0.145 in Awamleh. The age-restricted OpenBio estimate was +0.264 with a wide interval. BMPR2 and SMAD9 RNA levels were highest in endothelial cells in the Admati reference. The extracellular BMP antagonist GREM2 was strongest in syncytiotrophoblast. [Article and figures](article.md)
+
+**Prediction.** In a new group of pregnancies with comparable delivery ages, the higher villous BMP RNA score in EOPE+FGR will accompany a difference in nuclear phosphorylated SMAD1/5/9 within villous endothelial cells or trophoblasts. Because the score includes both positive and inhibitory pathway components, we predict a cell-specific difference in phosphorylation without specifying its direction from RNA alone. Yi et al. described altered BMP2 and its receptors in EOPE placenta. Deng et al. reported BMP2 signaling through SMAD2/3 in trophoblasts. [Yi et al.](https://doi.org/10.3389/fcell.2021.768669) · [Deng et al.](https://doi.org/10.1016/j.ebiom.2023.104664)
+
+**Test.** Recruit independent EOPE+FGR and isolated-FGR pregnancies with overlap in delivery age, record labor, delivery mode and FGR severity, and sample matched villous regions. Measure the bulk score and, on adjacent sections, quantify nuclear pSMAD1/5/9 and cell proportions with endothelial and trophoblast identity markers. Include pSMAD2/3 as a complementary readout. Summarize measurements per pregnancy and estimate differences within each pre-specified cell class. If cell proportions explain the RNA shift and nuclear pSMAD1/5/9 is similar within cell types, the canonical within-cell explanation would be weakened.
+
+**Confidence and relevance.** The exploratory RNA association is directionally consistent. Confidence in the proposed mechanism is low because delivery tissue, cell mixtures, inhibitors and shared activin components can all affect the score. A protein-level result would clarify which cell classes and signaling readouts matter for future mechanistic studies.

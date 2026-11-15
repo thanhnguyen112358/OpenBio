@@ -1,0 +1,137 @@
+sample_id,geo_accession,donor_id,group,pe_status,pe_onset,fgr_status,control_type,ga_delivery_source,ga_delivery_completed_weeks,ga_delivery_extra_days,ga_delivery_weeks,preterm_delivery,maternal_age_years,birthweight_interval_g,birthweight_lower_g,birthweight_upper_g,fetal_sex,sbp_max_mmhg,dbp_max_mmhg,qc_flags,cohort,tissue,inferred_round,round_evidence,assigned_gene_counts,htseq_total,assignment_fraction,labor,delivery_mode,size_factor,geo_diagnosis,source_column
+S01_VT,GSM6175116,S01,EOPE+FGR,PE,early_onset,FGR,not_control,33.4,33.0,4.0,33.571,yes,34.0,1100-1200,1100.0,1200.0,female,170.0,98.0,none,OpenBio,vt,other_round,inferred_from_methods,6849091,17412551.0,0.39334219322602415,,,0.5483320750474825,,
+S02_VT,GSM6175117,S02,EOPE+FGR,PE,early_onset,FGR,not_control,33.3,33.0,3.0,33.429,yes,32.0,1500-1600,1500.0,1600.0,male,162.0,118.0,none,OpenBio,vt,other_round,inferred_from_methods,15592423,38746064.0,0.4024259857723871,,,1.2950904665702967,,
+S03_VT,GSM6175118,S03,EOPE+FGR,PE,early_onset,FGR,not_control,26.4,26.0,4.0,26.571,yes,19.0,400-500,400.0,500.0,female,160.0,90.0,none,OpenBio,vt,other_round,inferred_from_methods,14844727,32432510.0,0.4577113211404236,,,1.0894620297429294,,
+S04_VT,GSM6175119,S04,FGR,no_PE,not_applicable,FGR,not_control,30.3,30.0,3.0,30.429,yes,25.0,900-1000,900.0,1000.0,male,143.0,79.0,no_pe_with_bp_ge_140_90,OpenBio,vt,other_round,inferred_from_methods,13837233,45777553.0,0.30227113712259807,,,1.0138150329022169,,
+S05_VT,GSM6175120,S05,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,29.6,29.0,6.0,29.857,yes,16.0,1200-1300,1200.0,1300.0,male,122.0,60.0,none,OpenBio,vt,with_controls,reported_in_methods,9282852,27752047.0,0.3344925150926705,,,0.8129420328057818,,
+S06_VT,GSM6175121,S06,EOPE,PE,early_onset,no_FGR,not_control,30.0,30.0,0.0,30.0,yes,26.0,1400-1500,1400.0,1500.0,female,166.0,111.0,none,OpenBio,vt,other_round,inferred_from_methods,16217807,40118939.0,0.4042431680458947,,,1.3599648756664928,,
+S07_VT,GSM6175122,S07,EOPE,PE,early_onset,no_FGR,not_control,33.0,33.0,0.0,33.0,yes,29.0,1700-1800,1700.0,1800.0,female,171.0,100.0,none,OpenBio,vt,other_round,inferred_from_methods,14398694,35506179.0,0.4055264296391904,,,0.9467687195522587,,
+S08_VT,GSM6175123,S08,FGR,no_PE,not_applicable,FGR,not_control,29.0,29.0,0.0,29.0,yes,31.0,700-800,700.0,800.0,female,134.0,80.0,none,OpenBio,vt,other_round,inferred_from_methods,17684881,47559075.0,0.3718508192179936,,,1.6638628070471606,,
+S09_VT,GSM6175124,S09,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,32.0,32.0,0.0,32.0,yes,36.0,1900-2000,1900.0,2000.0,male,123.0,66.0,none,OpenBio,vt,with_controls,reported_in_methods,9879561,28636554.0,0.34499824944020846,,,0.8589004424134613,,
+S10_VT,GSM6175125,S10,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,32.2,32.0,2.0,32.286,yes,20.0,1700-1800,1700.0,1800.0,female,113.0,57.0,none,OpenBio,vt,with_controls,reported_in_methods,11150810,33564352.0,0.33222181676559703,,,0.9737234231049898,,
+S11_VT,GSM6175126,S11,FGR,no_PE,not_applicable,FGR,not_control,30.1,30.0,1.0,30.143,yes,18.0,800-900,800.0,900.0,male,92.0,60.0,none,OpenBio,vt,other_round,inferred_from_methods,16989340,43297716.0,0.39238420797993134,,,1.5994719468669696,,
+S12_VT,GSM6175127,S12,EOPE+FGR,PE,early_onset,FGR,not_control,27.0,27.0,0.0,27.0,yes,17.0,600-700,600.0,700.0,male,138.0,88.0,pe_without_bp_ge_140_90,OpenBio,vt,other_round,inferred_from_methods,7319849,43027703.0,0.17011944606943114,,,0.5791159375448381,,
+S13_VT,GSM6175128,S13,EOPE+FGR,PE,early_onset,FGR,not_control,33.5,33.0,5.0,33.714,yes,28.0,1600-1700,1600.0,1700.0,female,160.0,104.0,none,OpenBio,vt,other_round,inferred_from_methods,17791850,47842830.0,0.3718812202371808,,,1.3603045932714914,,
+S14_VT,GSM6175129,S14,FGR,no_PE,not_applicable,FGR,not_control,29.0,29.0,0.0,29.0,yes,26.0,600-700,600.0,700.0,male,126.0,84.0,none,OpenBio,vt,other_round,inferred_from_methods,13313476,35000954.0,0.3803746606449641,,,1.2312330713691735,,
+S15_VT,GSM6175130,S15,FGR,no_PE,not_applicable,FGR,not_control,26.5,26.0,5.0,26.714,yes,20.0,600-700,600.0,700.0,male,113.0,90.0,no_pe_with_bp_ge_140_90,OpenBio,vt,other_round,inferred_from_methods,16130097,37507750.0,0.43004704361098706,,,1.3933772134331108,,
+S16_VT,GSM6175131,S16,EOPE,PE,early_onset,no_FGR,not_control,30.4,30.0,4.0,30.571,yes,15.0,1400-1500,1400.0,1500.0,female,196.0,119.0,none,OpenBio,vt,with_controls,reported_in_methods,11413478,33305501.0,0.34269047626696864,,,0.9949989047381854,,
+S17_VT,GSM6175132,S17,EOPE+FGR,PE,early_onset,FGR,not_control,27.5,27.0,5.0,27.714,yes,39.0,700-800,700.0,800.0,female,161.0,102.0,none,OpenBio,vt,other_round,inferred_from_methods,15911948,40057260.0,0.397230065161721,,,1.2762331212637046,,
+S18_VT,GSM6175133,S18,EOPE,PE,early_onset,no_FGR,not_control,28.1,28.0,1.0,28.143,yes,24.0,900-1000,900.0,1000.0,female,176.0,113.0,none,OpenBio,vt,other_round,inferred_from_methods,13250181,32968242.0,0.4019074174473725,,,1.0712515075719864,,
+S19_VT,GSM6175134,S19,EOPE,PE,early_onset,no_FGR,not_control,27.5,27.0,5.0,27.714,yes,26.0,800-900,800.0,900.0,male,170.0,92.0,none,OpenBio,vt,other_round,inferred_from_methods,22422012,55356194.0,0.4050497402332249,,,1.8125360679908469,,
+S20_VT,GSM6175135,S20,EOPE,PE,early_onset,no_FGR,not_control,26.0,26.0,0.0,26.0,yes,18.0,600-700,600.0,700.0,female,161.0,98.0,none,OpenBio,vt,with_controls,reported_in_methods,11601783,32922396.0,0.3523978935190501,,,0.9714162797839969,,
+S21_VT,GSM6175136,S21,EOPE,PE,early_onset,no_FGR,not_control,31.6,31.0,6.0,31.857,yes,30.0,1400-1500,1400.0,1500.0,male,208.0,117.0,none,OpenBio,vt,with_controls,reported_in_methods,11542879,30976266.0,0.3726362305902203,,,0.8626111842901626,,
+S22_VT,GSM6175137,S22,EOPE,PE,early_onset,no_FGR,not_control,30.6,30.0,6.0,30.857,yes,27.0,1400-1500,1400.0,1500.0,female,189.0,122.0,none,OpenBio,vt,with_controls,reported_in_methods,5594250,25275091.0,0.22133451468087692,,,0.4517660360187209,,
+S23_VT,GSM6175138,S23,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,33.0,33.0,0.0,33.0,yes,25.0,1900-2000,1900.0,2000.0,female,110.0,66.0,none,OpenBio,vt,with_controls,reported_in_methods,9634940,28712965.0,0.33556060824787687,,,0.8727402601412598,,
+S24_VT,GSM6175139,S24,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,30.4,30.0,4.0,30.571,yes,39.0,1400-1500,1400.0,1500.0,male,120.0,70.0,none,OpenBio,vt,with_controls,reported_in_methods,10474134,29779141.0,0.35172720395124896,,,0.7998926134996531,,
+S25_VT,GSM6175140,S25,EOPE+FGR,PE,early_onset,FGR,not_control,33.0,33.0,0.0,33.0,yes,22.0,1000-1100,1000.0,1100.0,male,142.0,97.0,none,OpenBio,vt,other_round,inferred_from_methods,15859057,41889881.0,0.37858921107940124,,,1.2259558350178446,,
+S26_VT,GSM6175141,S26,TB,no_PE,not_applicable,no_FGR,term_birth,38.7,38.0,7.0,39.0,no,26.0,,,,male,,,ga_days_component_gt6;bp_missing;birthweight_missing,OpenBio,vt,with_controls,reported_in_methods,11459616,37146322.0,0.30849934483419383,,,1.059812966714096,,
+S27_VT,GSM6175142,S27,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,37.0,,,,male,,,bp_missing;birthweight_missing,OpenBio,vt,with_controls,reported_in_methods,8102992,27803642.0,0.2914363521153092,,,0.7260228052688034,,
+S28_VT,GSM6175143,S28,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,26.0,,,,female,,,bp_missing;birthweight_missing,OpenBio,vt,with_controls,reported_in_methods,9867212,28404149.0,0.3473862920519111,,,0.8008616898345626,,
+S29_VT,GSM6175144,S29,TB,no_PE,not_applicable,no_FGR,term_birth,39.3,39.0,3.0,39.429,no,28.0,,,,female,,,bp_missing;birthweight_missing,OpenBio,vt,with_controls,reported_in_methods,10239192,30829312.0,0.3321252190123477,,,0.9071042611860154,,
+S30_VT,GSM6175145,S30,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,19.0,,,,male,,,bp_missing;birthweight_missing,OpenBio,vt,with_controls,reported_in_methods,11741205,33518107.0,0.3502943946088602,,,1.036019125918197,,
+S04_DB,GSM6175146,S04,FGR,no_PE,not_applicable,FGR,not_control,30.3,30.0,3.0,30.429,yes,25.0,900-1000,900.0,1000.0,male,143.0,79.0,no_pe_with_bp_ge_140_90,OpenBio,db,other_round,inferred_from_methods,16614849,42531922.0,0.3906442083666005,,,,,
+S05_DB,GSM6175147,S05,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,29.6,29.0,6.0,29.857,yes,16.0,1200-1300,1200.0,1300.0,male,122.0,60.0,none,OpenBio,db,with_controls,reported_in_methods,15041898,42609717.0,0.3530156748048808,,,,,
+S06_DB,GSM6175148,S06,EOPE,PE,early_onset,no_FGR,not_control,30.0,30.0,0.0,30.0,yes,26.0,1400-1500,1400.0,1500.0,female,166.0,111.0,none,OpenBio,db,other_round,inferred_from_methods,17876692,43739414.0,0.40870899642139696,,,,,
+S07_DB,GSM6175149,S07,EOPE,PE,early_onset,no_FGR,not_control,33.0,33.0,0.0,33.0,yes,29.0,1700-1800,1700.0,1800.0,female,171.0,100.0,none,OpenBio,db,other_round,inferred_from_methods,26921056,65923115.0,0.40837050858412866,,,,,
+S08_DB,GSM6175150,S08,FGR,no_PE,not_applicable,FGR,not_control,29.0,29.0,0.0,29.0,yes,31.0,700-800,700.0,800.0,female,134.0,80.0,none,OpenBio,db,other_round,inferred_from_methods,17722327,47961966.0,0.36950793468307785,,,,,
+S09_DB,GSM6175151,S09,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,32.0,32.0,0.0,32.0,yes,36.0,1900-2000,1900.0,2000.0,male,123.0,66.0,none,OpenBio,db,with_controls,reported_in_methods,8034011,28351723.0,0.2833694093300785,,,,,
+S10_DB,GSM6175152,S10,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,32.2,32.0,2.0,32.286,yes,20.0,1700-1800,1700.0,1800.0,female,113.0,57.0,none,OpenBio,db,with_controls,reported_in_methods,7344180,25967657.0,0.2828202790879439,,,,,
+S11_DB,GSM6175153,S11,FGR,no_PE,not_applicable,FGR,not_control,30.1,30.0,1.0,30.143,yes,18.0,800-900,800.0,900.0,male,92.0,60.0,none,OpenBio,db,other_round,inferred_from_methods,20232257,51547256.0,0.3924992050013293,,,,,
+S12_DB,GSM6175154,S12,EOPE+FGR,PE,early_onset,FGR,not_control,27.0,27.0,0.0,27.0,yes,17.0,600-700,600.0,700.0,male,138.0,88.0,pe_without_bp_ge_140_90,OpenBio,db,other_round,inferred_from_methods,5842624,15976005.0,0.36571245439645267,,,,,
+S13_DB,GSM6175155,S13,EOPE+FGR,PE,early_onset,FGR,not_control,33.5,33.0,5.0,33.714,yes,28.0,1600-1700,1600.0,1700.0,female,160.0,104.0,none,OpenBio,db,other_round,inferred_from_methods,17325658,49478808.0,0.35016320522515415,,,,,
+S14_DB,GSM6175156,S14,FGR,no_PE,not_applicable,FGR,not_control,29.0,29.0,0.0,29.0,yes,26.0,600-700,600.0,700.0,male,126.0,84.0,none,OpenBio,db,other_round,inferred_from_methods,18478582,50189960.0,0.3681728776034091,,,,,
+S15_DB,GSM6175157,S15,FGR,no_PE,not_applicable,FGR,not_control,26.5,26.0,5.0,26.714,yes,20.0,600-700,600.0,700.0,male,113.0,90.0,no_pe_with_bp_ge_140_90,OpenBio,db,other_round,inferred_from_methods,14925944,44765273.0,0.33342685076443074,,,,,
+S16_DB,GSM6175158,S16,EOPE,PE,early_onset,no_FGR,not_control,30.4,30.0,4.0,30.571,yes,15.0,1400-1500,1400.0,1500.0,female,196.0,119.0,none,OpenBio,db,with_controls,reported_in_methods,10071235,29023583.0,0.34700178127559234,,,,,
+S17_DB,GSM6175159,S17,EOPE+FGR,PE,early_onset,FGR,not_control,27.5,27.0,5.0,27.714,yes,39.0,700-800,700.0,800.0,female,161.0,102.0,none,OpenBio,db,other_round,inferred_from_methods,22168248,56654163.0,0.3912907159179106,,,,,
+S18_DB,GSM6175160,S18,EOPE,PE,early_onset,no_FGR,not_control,28.1,28.0,1.0,28.143,yes,24.0,900-1000,900.0,1000.0,female,176.0,113.0,none,OpenBio,db,other_round,inferred_from_methods,16773871,42694918.0,0.39287746143463725,,,,,
+S19_DB,GSM6175161,S19,EOPE,PE,early_onset,no_FGR,not_control,27.5,27.0,5.0,27.714,yes,26.0,800-900,800.0,900.0,male,170.0,92.0,none,OpenBio,db,other_round,inferred_from_methods,30017594,75433100.0,0.3979366352436795,,,,,
+S20_DB,GSM6175162,S20,EOPE,PE,early_onset,no_FGR,not_control,26.0,26.0,0.0,26.0,yes,18.0,600-700,600.0,700.0,female,161.0,98.0,none,OpenBio,db,with_controls,reported_in_methods,14519032,33145359.0,0.4380411749349283,,,,,
+S21_DB,GSM6175163,S21,EOPE,PE,early_onset,no_FGR,not_control,31.6,31.0,6.0,31.857,yes,30.0,1400-1500,1400.0,1500.0,male,208.0,117.0,none,OpenBio,db,with_controls,reported_in_methods,3271412,20716097.0,0.15791642605264883,,,,,
+S22_DB,GSM6175164,S22,EOPE,PE,early_onset,no_FGR,not_control,30.6,30.0,6.0,30.857,yes,27.0,1400-1500,1400.0,1500.0,female,189.0,122.0,none,OpenBio,db,with_controls,reported_in_methods,14363176,37107549.0,0.3870688414370887,,,,,
+S23_DB,GSM6175165,S23,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,33.0,33.0,0.0,33.0,yes,25.0,1900-2000,1900.0,2000.0,female,110.0,66.0,none,OpenBio,db,with_controls,reported_in_methods,11396365,32439024.0,0.3513165192639581,,,,,
+S24_DB,GSM6175166,S24,iPTB,no_PE,not_applicable,no_FGR,preterm_birth,30.4,30.0,4.0,30.571,yes,39.0,1400-1500,1400.0,1500.0,male,120.0,70.0,none,OpenBio,db,with_controls,reported_in_methods,10200876,30264825.0,0.3370538570766558,,,,,
+S25_DB,GSM6175167,S25,EOPE+FGR,PE,early_onset,FGR,not_control,33.0,33.0,0.0,33.0,yes,22.0,1000-1100,1000.0,1100.0,male,142.0,97.0,none,OpenBio,db,other_round,inferred_from_methods,31326168,79750729.0,0.3928010238000458,,,,,
+S26_DB,GSM6175168,S26,TB,no_PE,not_applicable,no_FGR,term_birth,38.7,38.0,7.0,39.0,no,26.0,,,,male,,,ga_days_component_gt6;bp_missing;birthweight_missing,OpenBio,db,with_controls,reported_in_methods,8794706,23510184.0,0.3740806962633725,,,,,
+S27_DB,GSM6175169,S27,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,37.0,,,,male,,,bp_missing;birthweight_missing,OpenBio,db,with_controls,reported_in_methods,12431811,36103517.0,0.3443379491255658,,,,,
+S28_DB,GSM6175170,S28,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,26.0,,,,female,,,bp_missing;birthweight_missing,OpenBio,db,with_controls,reported_in_methods,7238113,24543514.0,0.2949094005039376,,,,,
+S29_DB,GSM6175171,S29,TB,no_PE,not_applicable,no_FGR,term_birth,39.3,39.0,3.0,39.429,no,28.0,,,,female,,,bp_missing;birthweight_missing,OpenBio,db,with_controls,reported_in_methods,6448365,27866338.0,0.23140338712607303,,,,,
+S30_DB,GSM6175172,S30,TB,no_PE,not_applicable,no_FGR,term_birth,39.1,39.0,1.0,39.143,no,19.0,,,,male,,,bp_missing;birthweight_missing,OpenBio,db,with_controls,reported_in_methods,7188033,27340131.0,0.2629114322824569,,,,,
+GSM3147334,GSM3147334,GSM3147334,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36025577,,,,,1.0519297747867342,Control,X403.10
+GSM3147336,GSM3147336,GSM3147336,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39822845,,,,,0.9860307352746883,Control,PE12.03
+GSM3147330,GSM3147330,GSM3147330,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39172346,,,,,1.0970119409925345,Control,X383.10
+GSM3147339,GSM3147339,GSM3147339,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,30686045,,,,,0.8495828160573028,Control,PE13.20
+GSM3147328,GSM3147328,GSM3147328,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34031901,,,,,1.1049118810763388,Control,X328.08
+GSM3147337,GSM3147337,GSM3147337,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40739567,,,,,1.2096910808591306,Control,PE12.08
+GSM3147340,GSM3147340,GSM3147340,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39293185,,,,,1.3065733607021963,Control,PE13.27
+GSM3147331,GSM3147331,GSM3147331,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,41370326,,,,,1.370201071491308,Control,X399.10
+GSM3147329,GSM3147329,GSM3147329,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40695182,,,,,0.9853850015262174,Control,X338.08
+GSM3147333,GSM3147333,GSM3147333,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,43856714,,,,,1.3347318988759271,Control,X401.10
+GSM3147332,GSM3147332,GSM3147332,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42051261,,,,,1.3825723004990267,Control,X400.10
+GSM3147335,GSM3147335,GSM3147335,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39300583,,,,,1.317927101316039,Control,X550
+GSM3147342,GSM3147342,GSM3147342,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39745256,,,,,1.1418442064049201,Control,PE14.19
+GSM3147344,GSM3147344,GSM3147344,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,37433670,,,,,1.038341390946945,Control,PE14.33
+GSM3147343,GSM3147343,GSM3147343,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,37500647,,,,,0.9635942365251652,Control,PE14.22
+GSM3147341,GSM3147341,GSM3147341,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42818841,,,,,1.2870617284860228,Control,PE13.31
+GSM3147327,GSM3147327,GSM3147327,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42098710,,,,,1.121307157713087,Control,X293.06
+GSM3147326,GSM3147326,GSM3147326,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39298162,,,,,1.1212834862743533,Control,X279.06
+GSM3147338,GSM3147338,GSM3147338,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39065899,,,,,1.1024826268729864,Control,PE13.16
+GSM3147325,GSM3147325,GSM3147325,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,37872965,,,,,1.0593390060727765,Control,X267.05
+GSM3147345,GSM3147345,GSM3147345,Preterm control,,,,,,,,,,,,,,,,,,Awamleh,vt,,,31698017,,,,,0.8879771075463218,Control,PE15.26
+GSM3147357,GSM3147357,GSM3147357,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,28404811,,,,,0.655670773219454,Preeclampsia only,PE13.35
+GSM3147352,GSM3147352,GSM3147352,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,26928421,,,,,0.6913346350232501,Preeclampsia only,PE13.19
+GSM3147359,GSM3147359,GSM3147359,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,31403042,,,,,0.9593120011048732,Preeclampsia only,PE14.10
+GSM3147362,GSM3147362,GSM3147362,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,29907961,,,,,0.794986372203307,Preeclampsia only,PE15.19
+GSM3147346,GSM3147346,GSM3147346,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36561357,,,,,0.9279469327016902,Preeclampsia only,X239.05
+GSM3147347,GSM3147347,GSM3147347,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36137752,,,,,0.9433964481568068,Preeclampsia only,X255.05
+GSM3147361,GSM3147361,GSM3147361,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39423206,,,,,1.1146359889557065,Preeclampsia only,PE14.21
+GSM3147355,GSM3147355,GSM3147355,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39316380,,,,,1.0723231462686964,Preeclampsia only,PE13.30
+GSM3147348,GSM3147348,GSM3147348,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,44983464,,,,,1.1750649692151307,Preeclampsia only,X257.05
+GSM3147356,GSM3147356,GSM3147356,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,38098637,,,,,1.0590252281795483,Preeclampsia only,PE13.33
+GSM3147360,GSM3147360,GSM3147360,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36380866,,,,,0.8951624999442334,Preeclampsia only,PE14.11
+GSM3147350,GSM3147350,GSM3147350,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40742765,,,,,1.1694744698773687,Preeclampsia only,X336.08
+GSM3147358,GSM3147358,GSM3147358,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,44548470,,,,,1.1779712150595305,Preeclampsia only,PE14.03
+GSM3147354,GSM3147354,GSM3147354,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,37407360,,,,,0.9191920108572966,Preeclampsia only,PE13.29
+GSM3147353,GSM3147353,GSM3147353,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40670676,,,,,1.1770844678909074,Preeclampsia only,PE13.24
+GSM3147349,GSM3147349,GSM3147349,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42699193,,,,,1.120437120259279,Preeclampsia only,X283.06
+GSM3147351,GSM3147351,GSM3147351,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,31344358,,,,,0.7672522818320818,Preeclampsia only,X9409
+GSM3147363,GSM3147363,GSM3147363,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,35854859,,,,,0.9157447730452762,Preeclampsia only,PE15.33
+GSM3147364,GSM3147364,GSM3147364,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,33624012,,,,,0.9003028141649269,Preeclampsia only,PE16.03
+GSM3147365,GSM3147365,GSM3147365,EOPE,,,,,,,,,,,,,,,,,,Awamleh,vt,,,35417477,,,,,1.0020737675551041,Preeclampsia only,PE14.09
+GSM3147390,GSM3147390,GSM3147390,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34472487,,,,,1.1936292078699189,Intrauterine Growth Restriction only,X78
+GSM3147388,GSM3147388,GSM3147388,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34269131,,,,,0.8416752932317277,Intrauterine Growth Restriction only,X36
+GSM3147396,GSM3147396,GSM3147396,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36679715,,,,,1.1093580540854038,Intrauterine Growth Restriction only,IUGR14.11
+GSM3147387,GSM3147387,GSM3147387,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,46205034,,,,,1.3597390239185185,Intrauterine Growth Restriction only,X33b
+GSM3147386,GSM3147386,GSM3147386,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,45556360,,,,,1.173591638015748,Intrauterine Growth Restriction only,X17
+GSM3147398,GSM3147398,GSM3147398,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,35512750,,,,,0.8634012596790067,Intrauterine Growth Restriction only,PE15.24
+GSM3147389,GSM3147389,GSM3147389,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,38487759,,,,,1.0998190767597877,Intrauterine Growth Restriction only,X42
+GSM3147391,GSM3147391,GSM3147391,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40614473,,,,,0.9941807968516102,Intrauterine Growth Restriction only,X26571
+GSM3147395,GSM3147395,GSM3147395,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40006826,,,,,1.0627721103810364,Intrauterine Growth Restriction only,IUGR14.10
+GSM3147401,GSM3147401,GSM3147401,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42111672,,,,,1.0457801074849837,Intrauterine Growth Restriction only,PE16.05
+GSM3147402,GSM3147402,GSM3147402,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34575410,,,,,0.9008747421800866,Intrauterine Growth Restriction only,PE16.06
+GSM3147399,GSM3147399,GSM3147399,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36610656,,,,,0.8902460282622768,Intrauterine Growth Restriction only,PE15.25
+GSM3147392,GSM3147392,GSM3147392,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,33751936,,,,,0.86132148029384,Intrauterine Growth Restriction only,X26572
+GSM3147394,GSM3147394,GSM3147394,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36360127,,,,,0.9495258145199823,Intrauterine Growth Restriction only,X27033
+GSM3147400,GSM3147400,GSM3147400,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34555034,,,,,0.9707198561537871,Intrauterine Growth Restriction only,PE15.32
+GSM3147397,GSM3147397,GSM3147397,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36131885,,,,,0.8979049224885314,Intrauterine Growth Restriction only,IUGR15.06
+GSM3147393,GSM3147393,GSM3147393,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36698616,,,,,1.010691970381078,Intrauterine Growth Restriction only,X26714
+GSM3147403,GSM3147403,GSM3147403,FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,43811640,,,,,1.0890549640521865,Intrauterine Growth Restriction only,PE16.21
+GSM3147380,GSM3147380,GSM3147380,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,26281135,,,,,0.6493718012809983,Preeclampsia and Intrauterine Growth Restriction,PE14.08
+GSM3147366,GSM3147366,GSM3147366,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,31104478,,,,,0.682281074087614,Preeclampsia and Intrauterine Growth Restriction,X1
+GSM3147368,GSM3147368,GSM3147368,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,38060453,,,,,0.993845248515824,Preeclampsia and Intrauterine Growth Restriction,X24
+GSM3147382,GSM3147382,GSM3147382,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,37535078,,,,,1.0678271567340405,Preeclampsia and Intrauterine Growth Restriction,PE14.32
+GSM3147373,GSM3147373,GSM3147373,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,30179111,,,,,0.8910072473978906,Preeclampsia and Intrauterine Growth Restriction,X364.09
+GSM3147376,GSM3147376,GSM3147376,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,32617038,,,,,0.8275812140175339,Preeclampsia and Intrauterine Growth Restriction,IUGR15.01
+GSM3147377,GSM3147377,GSM3147377,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42533185,,,,,1.1651328813585473,Preeclampsia and Intrauterine Growth Restriction,IUGR15.08
+GSM3147383,GSM3147383,GSM3147383,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,35897237,,,,,0.9403289086829849,Preeclampsia and Intrauterine Growth Restriction,PE15.08
+GSM3147378,GSM3147378,GSM3147378,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34907408,,,,,1.0271102751492922,Preeclampsia and Intrauterine Growth Restriction,PE12.06
+GSM3147379,GSM3147379,GSM3147379,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39845332,,,,,1.06167874301365,Preeclampsia and Intrauterine Growth Restriction,PE13.22
+GSM3147381,GSM3147381,GSM3147381,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,39339542,,,,,1.047460313283188,Preeclampsia and Intrauterine Growth Restriction,PE14.20
+GSM3147372,GSM3147372,GSM3147372,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34660730,,,,,0.8816091799475332,Preeclampsia and Intrauterine Growth Restriction,X314.07
+GSM3147369,GSM3147369,GSM3147369,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34416959,,,,,0.8711364436421055,Preeclampsia and Intrauterine Growth Restriction,X27
+GSM3147367,GSM3147367,GSM3147367,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,40580951,,,,,1.1314468634165726,Preeclampsia and Intrauterine Growth Restriction,X2
+GSM3147370,GSM3147370,GSM3147370,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,34838784,,,,,0.925984745500192,Preeclampsia and Intrauterine Growth Restriction,X270.06
+GSM3147374,GSM3147374,GSM3147374,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42615587,,,,,1.105469559471353,Preeclampsia and Intrauterine Growth Restriction,X396.10
+GSM3147371,GSM3147371,GSM3147371,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,42702677,,,,,1.0868875894191394,Preeclampsia and Intrauterine Growth Restriction,X287.06
+GSM3147384,GSM3147384,GSM3147384,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,36227197,,,,,0.9231259961509226,Preeclampsia and Intrauterine Growth Restriction,PE15.30
+GSM3147375,GSM3147375,GSM3147375,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,31170885,,,,,0.8366377174020051,Preeclampsia and Intrauterine Growth Restriction,X9177
+GSM3147385,GSM3147385,GSM3147385,EOPE+FGR,,,,,,,,,,,,,,,,,,Awamleh,vt,,,44884109,,,,,1.254712772044734,Preeclampsia and Intrauterine Growth Restriction,PE16.08

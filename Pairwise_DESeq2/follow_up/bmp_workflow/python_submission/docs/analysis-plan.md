@@ -1,0 +1,23 @@
+# Analysis plan
+
+Estimate the mean difference in a fixed placental BMP RNA score between pregnancies with early-onset preeclampsia and fetal growth restriction (EOPE+FGR) and pregnancies with isolated FGR. Use chorionic villi at delivery. A pilot containing both cohorts informed this defined exploratory follow-up.
+
+| Dataset | Role | Main comparison |
+| --- | --- | --- |
+| OpenBio Track 1 / Ackerman | Primary | 7 EOPE+FGR versus 5 isolated FGR |
+| Awamleh GSE114691 | Separate cohort checked during selection | 20 EOPE+FGR versus 18 isolated FGR |
+| Admati placental atlas | Localize transcripts to candidate cell classes | Donor-class expression across the released sample set |
+| Piekos | Severe-PE context | Released FGR+PE Severe versus FGR labels |
+
+## Methods
+
+1. Join bulk counts to sample metadata and the donor audit, verify assignments and case counts, and keep the released clinical labels. Use the organizer’s converted delivery weeks. Record fetal sex, sequencing round inferred from the original study methods, HTSeq assignment, missing clinical fields, and flags. Plot age and variance-stabilized principal components by diagnosis, fetal sex and round.
+2. Use the 31 genes from MSigDB Reactome 2024.1.Hs `REACTOME_SIGNALING_BY_BMP` (R-HSA-201451). Require a unique HGNC/Ensembl mapping and at least 10 reads in five or more libraries in each complete villous cohort. Average log₂(median-ratio normalized count + 1) over the 27 passing genes for each pregnancy. Estimate group mean differences and approximate 95% Welch intervals. Normalize separately within cohort and retain the same size factors and genes for the age, flag and leave-one-out checks. Also score after removing INHA and INHBA.
+3. Fit the OpenBio PyDESeq2 model `~ fetal_sex + group` across all villous libraries and refit the same design on the two arms in the shared delivery-age range. The Awamleh PyDESeq2 `~ group` fit includes all 79 released libraries. Use group-only contrasts because publicly matched sample-level covariates are unavailable. Only repeat on the authors’ QC-filtered samples if the retained GSM IDs can be verified.
+4. Extract unshrunken log₂ fold changes, Wald statistics, approximate 95% Wald intervals and genome-wide FDR. Use genes with finite Wald statistics and p-values, base mean at least 10 and unambiguous symbol mappings among eligible genes. Intersect five full contrasts per cohort and the OpenBio age-restricted contrast. Use GSEApy adaptive multilevel sampling with seed 1049 per fit, serial execution, size limits 10 and 500, and epsilon 10⁻¹⁰. Adjust p-values across BMP, activin and TGF-β receptor branches within each fit.
+5. Check BMPR2, BMPR1B, GREM2 and SMAD9 in the official browser. Summarize released pseudobulk donor classes with at least 20 cells per donor-class and three donors per class. Report median counts per million and the fraction with at least ten reads. Compare published cell-class markers in bulk as an independent description relevant to composition.
+6. In the paired extension, normalize villi and decidua separately across all libraries in each tissue. Keep the fixed score genes that also pass the five-library count threshold in decidua. Compare both tissues and the paired decidua-minus-villi scores in four combined and five isolated-FGR pregnancies. For Piekos, use the fixed 27-gene score in the two severe-PE/FGR arms and a separate 31-gene sensitivity with the earlier pseudocount of 0.5. Estimate unadjusted and same-delivery-support age-adjusted differences using approximate HC3 intervals.
+
+## Interpretation and outputs
+
+Confounding can arise from delivery age, severity of FGR, labor, delivery mode, sampling site and cell composition. Same-range restriction retains age imbalance and only two combined cases in OpenBio. Describe association at delivery. Use the atlas to suggest source cells, and use a new cohort with both FGR diagnoses to test cell-specific protein activation. The figures show clinical support, rank enrichment, pregnancy-level scores and differences, and cell class expression. The rerun also exports PCA and volcano figures. [Data and workflow](../README.md)

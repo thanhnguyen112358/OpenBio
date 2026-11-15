@@ -1,5 +1,7 @@
 # Genome-wide clinical contrasts
 
+The focused BMP follow-up is available as a [Python workflow](follow_up/bmp_workflow/python_submission/README.md) with [Python results](follow_up/bmp_workflow/python_results/README.md). The [verified R analysis and original tables](follow_up/bmp_workflow/README.md) are preserved for comparison.
+
 The analysis extracts ten unordered clinical contrasts from one R DESeq2 model per tissue. The inputs are the organizer's Track 01 raw counts for 30 villous tissue (VT) libraries and 27 decidua basalis (DB) libraries. A positive log₂ fold change means higher expression in the `numerator` group. The models are `~ fetal_sex + group` with DESeq2's default size-factor, dispersion, and Wald test procedures. They use the full set of pregnancies available in each tissue.
 
 Ackerman et al. show nine clinical contrasts per tissue in supplementary Figures S1 and S2. Those figures omit idiopathic preterm birth versus term birth, a comparison reported in the authors' earlier study. Their 2023 models also include two surrogate variables. This run is an exploratory baseline from the released files. Gestational age and sequencing round can influence the estimates. Age overlap in the summary describes group support and does not restrict the model fit. [Ackerman et al., supplemental figures](https://www.medrxiv.org/content/medrxiv/early/2023/03/12/2023.03.08.23286998.full.pdf#page=48) · [Earlier control study](https://pubmed.ncbi.nlm.nih.gov/27452435/)
