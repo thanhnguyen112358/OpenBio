@@ -1,0 +1,52 @@
+{
+  "classes": [
+    "syncytiotrophoblast",
+    "villous_cytotrophoblast",
+    "hofbauer_cell",
+    "macrophage",
+    "monocyte",
+    "endothelial_cell",
+    "stromal_cell",
+    "pericyte",
+    "smooth_muscle_cell"
+  ],
+  "pool_genes": 3105,
+  "seed": 20261115,
+  "n_null_pairs": 2000,
+  "leave_one_donor_out_range": [
+    0.6230820105820107,
+    0.7671296296296295
+  ],
+  "fine_resolution": {
+    "n_labels": 23,
+    "labels": [
+      "IMMUNE_HOFAUER_IFN1",
+      "IMMUNE_HOFBAUER",
+      "IMMUNE_MACROPHAGE-M1",
+      "IMMUNE_MACROPHAGE_TREM2",
+      "IMMUNE_MONOCYTE-CLASSICAL",
+      "IMMUNE_NK",
+      "IMMUNE_T-NAIVE",
+      "STROMAL_DIO3OS",
+      "STROMAL_GALNT15",
+      "STROMAL_IFN",
+      "STROMAL_LTN1",
+      "STROMAL_STEAP4",
+      "STROMAL_STRESS",
+      "TB_SCT",
+      "TB_VCT1",
+      "TB_VCT2",
+      "TB_VCT_proliferating",
+      "VASCULAR_ARTERIAL",
+      "VASCULAR_CAPILLARY",
+      "VASCULAR_EC_IFN",
+      "VASCULAR_PERICYTE",
+      "VASCULAR_SM",
+      "VASCULAR_VENOUS"
+    ],
+    "mean_pairwise_spearman": 0.5373884984181961,
+    "fraction_of_pairs_positive": 0.9486166007905138,
+    "mean_within_lineage": 0.670757774569964,
+    "mean_between_lineages": 0.49860253545569216
+  }
+}

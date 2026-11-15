@@ -1,0 +1,79 @@
+{
+  "exploratory_vs_prespecified": {
+    "prespecified": [
+      "HALLMARK_HYPOXIA",
+      "HALLMARK_GLYCOLYSIS",
+      "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+    ],
+    "exploratory": "the other 47 Hallmark sets; fits E and F; donor scores"
+  },
+  "ranking": "signed Wald statistic (stat) of genes with non-missing padj, mapped to HGNC symbols",
+  "gene_sets": {
+    "file": "openbio-datathon-2026\\track-01\\data\\track01_gene_sets.gmt",
+    "release": "MSigDB Hallmark v2024.1.Hs",
+    "sha256": "ee2463540042078bfa3f67828e1e223bb354446d9fbb4d22845866835ba5c772",
+    "n_sets": 50
+  },
+  "gsea": {
+    "method": "gseapy.prerank (gene-permutation)",
+    "permutations": 10000,
+    "seed": 20261114,
+    "weight": 1,
+    "min_size": 15,
+    "max_size": 500
+  },
+  "ranking_logs": {
+    "A_full": {
+      "tested_genes": 15453,
+      "dropped_unmapped_or_ambiguous": 367,
+      "dropped_duplicate_hgnc": 23,
+      "ranked_genes": 15063
+    },
+    "B_age_adjusted": {
+      "tested_genes": 15467,
+      "dropped_unmapped_or_ambiguous": 366,
+      "dropped_duplicate_hgnc": 23,
+      "ranked_genes": 15078
+    },
+    "C_shared_age": {
+      "tested_genes": 13960,
+      "dropped_unmapped_or_ambiguous": 238,
+      "dropped_duplicate_hgnc": 19,
+      "ranked_genes": 13703
+    },
+    "D_without_S22": {
+      "tested_genes": 14684,
+      "dropped_unmapped_or_ambiguous": 292,
+      "dropped_duplicate_hgnc": 22,
+      "ranked_genes": 14370
+    },
+    "E_without_S24": {
+      "tested_genes": 14953,
+      "dropped_unmapped_or_ambiguous": 321,
+      "dropped_duplicate_hgnc": 22,
+      "ranked_genes": 14610
+    },
+    "F_sex_adjusted": {
+      "tested_genes": 15456,
+      "dropped_unmapped_or_ambiguous": 364,
+      "dropped_duplicate_hgnc": 23,
+      "ranked_genes": 15069
+    }
+  },
+  "baseline_fits": {
+    "A_full": "deseq2\\fit_A_full.csv",
+    "B_age_adjusted": "deseq2\\fit_B_age_adjusted.csv",
+    "C_shared_age": "deseq2\\fit_C_shared_age.csv",
+    "D_without_S22": "deseq2\\fit_D_without_S22.csv",
+    "E_without_S24": "additional_checks\\fit_E_without_S24.csv",
+    "F_sex_adjusted": "additional_checks\\fit_F_sex_adjusted.csv"
+  },
+  "python": "3.11.9",
+  "packages": {
+    "gseapy": "1.1.4",
+    "pydeseq2": "0.5.4",
+    "pandas": "2.3.3",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  }
+}

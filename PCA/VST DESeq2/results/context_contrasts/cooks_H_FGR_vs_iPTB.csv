@@ -1,0 +1,11 @@
+,group,size_factor,genes_where_top_cooks_sample,genes_above_cooks_cutoff,pct_of_genes_where_top
+S04_VT,FGR,0.923,3304,13,18.9
+S05_VT,iPTB,0.758,1583,5,9.0
+S08_VT,FGR,1.552,1352,2,7.7
+S09_VT,iPTB,0.8,1462,3,8.4
+S10_VT,iPTB,0.904,1774,0,10.1
+S11_VT,FGR,1.489,1212,1,6.9
+S14_VT,FGR,1.141,934,1,5.3
+S15_VT,FGR,1.29,1665,3,9.5
+S23_VT,iPTB,0.816,1369,3,7.8
+S24_VT,iPTB,0.744,2845,8,16.3

@@ -1,0 +1,3 @@
+fit,design,n_EOPE,n_iPTB,genes_with_reads,genes_with_padj,genes_passing,higher_in_EOPE,lower_in_EOPE,genes_padj_below_cutoff,genes_with_outlier_count_replaced,genes_pvalue_removed_by_cooks,genes_lfc_not_converged,A_hits_retained,A_hits_same_direction,A_hits_median_abs_delta_lfc,A_hits_max_abs_delta_lfc,previous_207_retained
+E_without_S24,~ group,8,4,24380,14953,457,281,176,1383,86,25,0,304,352,0.12905738234050546,3.2415985560655187,197
+F_sex_adjusted,~ fetal_sex + group,8,5,24424,15456,294,210,84,805,0,21,4,260,352,0.07811474177013844,1.3222084189945074,191

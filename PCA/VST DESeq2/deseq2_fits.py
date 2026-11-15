@@ -45,10 +45,14 @@ FIT_COLORS = {"A_full": "black", "B_age_adjusted": "tab:blue",
               "C_shared_age": "tab:green", "D_without_S22": "crimson"}
 
 
-def run_fit(counts, cohort, design, n_cpus):
-    """Fit DESeq2 on raw counts and return (per-gene results, per-sample Cook's summary)."""
+def run_fit(counts, cohort, design, n_cpus, contrast=(CASE, CONTROL)):
+    """Fit DESeq2 on raw counts and return (per-gene results, per-sample Cook's summary).
+
+    `contrast` is (numerator group, denominator group); the default is the Q1 comparison.
+    """
     inference = DefaultInference(n_cpus=n_cpus)
-    metadata = cohort[["group", "ga_delivery_weeks"]].copy()
+    # `seq_run` (sequencing run, see batch_audit.py) is carried along only when the caller adds it.
+    metadata = cohort[[c for c in ("group", "ga_delivery_weeks", "fetal_sex", "seq_run") if c in cohort]].copy()
     metadata["group"] = metadata["group"].astype(str)
     # Centering delivery age leaves the group effect unchanged and lets every gene's fit
     # converge. With raw weeks (about 26 to 33), 56 genes failed to converge in fit B.
@@ -62,7 +66,7 @@ def run_fit(counts, cohort, design, n_cpus):
         quiet=True,
     )
     dds.deseq2()
-    stats = DeseqStats(dds, contrast=["group", CASE, CONTROL], inference=inference, quiet=True)
+    stats = DeseqStats(dds, contrast=["group", *contrast], inference=inference, quiet=True)
     stats.summary()
 
     results = stats.results_df.copy()

@@ -1,0 +1,5 @@
+fit,numerator,denominator,n_numerator,n_denominator,delivery_weeks_numerator,delivery_weeks_denominator,genes_with_padj,genes_passing,higher_in_numerator,lower_in_numerator,genes_with_outlier_count_replaced,genes_pvalue_removed_by_cooks,genes_lfc_not_converged,A_up_hits_also_positive,A_up_hits,A_down_hits_also_negative,A_down_hits,A_hits_also_passing,median_log2fc_of_A_up_hits,median_log2fc_of_A_down_hits,pearson_r_with_A_well_measured
+G_EOPE+FGR_vs_EOPE,EOPE+FGR,EOPE,7,8,26.6-33.7,26.0-33.0,24478,0,0,0,225,1,0,63,236,70,116,0,-0.224,-0.109,-0.016
+H_FGR_vs_iPTB,FGR,iPTB,5,5,26.7-30.4,29.9-33.0,17467,1008,400,608,0,33,0,209,236,116,116,119,0.65,-1.148,0.592
+I_EOPE_vs_TB,EOPE,TB,8,5,26.0-33.0,39.0-39.4,15482,430,293,137,93,10,1,231,236,106,116,188,1.354,-0.848,0.7
+J_EOPE+FGR_vs_iPTB,EOPE+FGR,iPTB,7,5,26.6-33.7,29.9-33.0,16706,794,329,465,146,12,0,236,236,116,116,229,1.255,-1.422,0.779

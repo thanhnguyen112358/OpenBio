@@ -36,6 +36,25 @@ git -C openbio-datathon-2026 pull --ff-only
 
 For data and software setup, follow the organizers’ [Track 1 setup guide](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/main/track-01/1-setup.md).
 
+### Local Python environment (Windows PowerShell)
+
+The project uses `.venv/` for its Python packages. From `OpenBio/`, create or rebuild it with:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r openbio-datathon-2026/environment/requirements.txt
+.\.venv\Scripts\python.exe -m pip check
+```
+
+In VS Code, select `.venv\Scripts\python.exe` as the Python interpreter or notebook kernel. To run PCA or open the organizer notebook:
+
+```powershell
+.\.venv\Scripts\python.exe PCA/organizer_pca.py --subsets
+.\.venv\Scripts\python.exe -m jupyterlab openbio-datathon-2026/track-01/notebooks/track01_workflow.ipynb
+```
+
+Installing the environment prepares the analysis tools; differential-expression results still require running the models in the Q1 plan.
+
 ## November 14, 2026 morning review
 
 Reviewed at 9:35 a.m. EST after the November 14 morning organizer repo update to [`fb751e9`](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/commit/fb751e9).

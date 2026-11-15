@@ -1,0 +1,4 @@
+fit,design,contrast,n,genes_with_padj,genes_passing,A_hits_same_direction,A_hits_compared,A_hits_still_passing,robust_207_still_passing,A_hits_median_abs_log2fc,slope_new_on_A_over_A_hits,pearson_r_with_A_well_measured
+K_same_run_4v5,~group,EOPE vs. iPTB,9,16255,395,351,352,222,171,1.395,0.987,0.88
+L_run_adjusted,~seq_run + group,EOPE vs. iPTB,13,13571,299,351,352,179,153,1.395,0.987,0.88
+M_run_within_EOPE,~group,later vs. earlier,8,15265,170,171,352,12,5,0.38,0.013,0.073

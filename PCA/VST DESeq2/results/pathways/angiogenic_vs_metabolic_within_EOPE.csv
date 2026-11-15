@@ -1,0 +1,7 @@
+score,n_EOPE,spearman_rho_with_angiogenic,nominal_p
+Hypoxia (full set),8,0.929,0.001
+Glycolysis (full set),8,0.548,0.16
+Oxidative phosphorylation (full set),8,-0.476,0.233
+Hypoxia (leading edge),8,0.929,0.001
+Glycolysis (leading edge),8,0.929,0.001
+Oxidative phosphorylation (leading edge),8,-0.143,0.736

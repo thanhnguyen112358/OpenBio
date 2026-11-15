@@ -1,0 +1,10 @@
+,syncytiotrophoblast,villous_cytotrophoblast,hofbauer_cell,macrophage,monocyte,endothelial_cell,stromal_cell,pericyte,smooth_muscle_cell
+syncytiotrophoblast,,0.964,0.83,0.8,0.418,0.879,0.685,0.661,0.95
+villous_cytotrophoblast,0.964,,0.758,0.8,0.552,0.891,0.588,0.624,0.917
+hofbauer_cell,0.83,0.758,,0.783,0.479,0.867,0.867,0.818,0.767
+macrophage,0.8,0.8,0.783,,0.817,0.767,0.767,0.617,0.767
+monocyte,0.418,0.552,0.479,0.817,,0.552,0.442,0.491,0.4
+endothelial_cell,0.879,0.891,0.867,0.767,0.552,,0.758,0.782,0.833
+stromal_cell,0.685,0.588,0.867,0.767,0.442,0.758,,0.952,0.767
+pericyte,0.661,0.624,0.818,0.617,0.491,0.782,0.952,,0.667
+smooth_muscle_cell,0.95,0.917,0.767,0.767,0.4,0.833,0.767,0.667,

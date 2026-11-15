@@ -1,0 +1,39 @@
+{
+  "run_inferred_from": "Ackerman et al. 2023 Methods; not in the released metadata",
+  "earlier_run": [
+    "S05_VT",
+    "S09_VT",
+    "S10_VT",
+    "S16_VT",
+    "S20_VT",
+    "S21_VT",
+    "S22_VT",
+    "S23_VT",
+    "S24_VT",
+    "S26_VT",
+    "S27_VT",
+    "S28_VT",
+    "S29_VT",
+    "S30_VT"
+  ],
+  "later_run": [
+    "S01_VT",
+    "S02_VT",
+    "S03_VT",
+    "S04_VT",
+    "S06_VT",
+    "S07_VT",
+    "S08_VT",
+    "S11_VT",
+    "S12_VT",
+    "S13_VT",
+    "S14_VT",
+    "S15_VT",
+    "S17_VT",
+    "S18_VT",
+    "S19_VT",
+    "S25_VT"
+  ],
+  "depth_mann_whitney_p": 0.000379012585993533,
+  "gsea_permutations": 1000
+}

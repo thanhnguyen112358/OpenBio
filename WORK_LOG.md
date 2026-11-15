@@ -1,13 +1,92 @@
 # Work log: Q1 placental villous RNA-seq (Track 1, Harvard OpenBio Datathon 2026)
 
 **Written for:** teammates and their coding agents picking up this work.
-**Last updated:** 2026-11-15, early morning (local time). Deadline is **Sunday 2026-11-15, 6:00 PM EST**.
-**Status:** analysis in progress. Nothing below has been committed or pushed.
+**Last updated:** 2026-11-15, second update (local time). Deadline is **Sunday 2026-11-15, 6:00 PM EST**.
+**Status:** analysis in progress. Start with section 0, which is newer than sections 4-6.
 
 Read this file first. Then read, in order:
 1. [`Q01-placental-gene-expression.md`](Q01-placental-gene-expression.md): research question and prespecified plan.
 2. [`PCA/VST DESeq2/README.md`](PCA/VST%20DESeq2/README.md): teammate's original QC, PCA and DESeq2 fits A–D.
 3. [`PCA/VST DESeq2/ADDITIONAL_CHECKS.md`](PCA/VST%20DESeq2/ADDITIONAL_CHECKS.md): sensitivity fits E and F.
+
+---
+
+## 0. READ THIS FIRST: update of 2026-11-15 (supersedes parts of sections 4-6)
+
+Two things changed the plan after the first version of this log.
+
+### 0.1 Sequencing run is confounded with group (new, important)
+
+Ackerman et al. (2023, Methods) state that the PTB and TB controls were sequenced earlier, together with S16, S20, S21 and S22. The run is **not** in the released metadata. Inferred layout:
+
+| Run | Samples | Assigned reads |
+|---|---|---|
+| Earlier | all iPTB (5), all TB (5), EOPE S16, S20, S21, S22 | 5.6-11.7 M |
+| Later | EOPE S06, S07, S18, S19, all EOPE+FGR (7), all FGR (5) | 6.8-22.4 M (median 15.7 M) |
+
+- The "read depth is associated with diagnosis" concern in the README is this run split (Mann-Whitney p = 0.0004). PC2 of the 13 Q1 donors follows run (|r| = 0.68) and depth (0.87). PC1 follows group (0.77).
+- **FGR vs. iPTB and EOPE+FGR vs. iPTB (context fits H and J) are fully confounded with run. Do not interpret them biologically.** Fit G (EOPE+FGR vs. EOPE) is partly confounded.
+- `batch_audit.py` fits: K = earlier run only, 4 EOPE vs. 5 iPTB; L = `~ seq_run + group` on all 13; M = run effect within EOPE (4 later vs. 4 earlier). K and L give the same group estimates by construction, because later-run EOPE donors only inform the run term.
+
+| Check | Result |
+|---|---|
+| Fit A's 352 hits, same direction in same-run fit K | 351 of 352; slope of K on A = 0.99 |
+| Still passing in K / L | 222 / 179 (smaller n, so less power) |
+| Benchmarks (`FLT1`, `ENG`, `LEP`, `INHBA`) | All pass in K and L, with effects equal to or slightly larger than in A |
+| Hallmark Hypoxia | NES +2.56 in K (q < 0.001). Stable. |
+| Hallmark Glycolysis | NES +2.07 in K (q < 0.001). Stable. |
+| Hallmark OXPHOS | **Run artifact in fit A.** Run within EOPE: NES +3.23. Same-run K: NES **-1.94** (q = 0.001), so it is lower in EOPE once run is held fixed. |
+| MYC targets V1 | Run artifact: +2.89 for run within EOPE, not significant in K |
+
+The core EOPE signature (angiogenic benchmarks, hypoxia, glycolysis) survives a same-run comparison. The unstable OXPHOS result in section 4.2 is explained: later-run libraries score higher on OXPHOS and MYC targets regardless of diagnosis. GSEA here used 1,000 permutations (10,000 for fits A-F).
+
+The high-ratio subgroup is not a run artifact. Both runs contain high and low `LDHA/LDHB` cases (later run: S18, S07, S01, S25, S02 high; S06, S19, S13 low), and all earlier-run controls are low. Outputs: `PCA/VST DESeq2/results/batch_audit/`.
+
+### 0.2 Novelty direction: the glycolytic shift is a placenta-wide donor state
+
+Our Hypoxia/Glycolysis result reproduces Ackerman's main finding (the "VT Black" module and the glycolytic-shift subgroup indexed by `LDHA/LDHB` and `PDK1/GOT1`), so it is not new. Ackerman could not say which cells carry the shift. This matches the question in [`Thanh/docs/glycolytic-shift-workflow.md`](Thanh/docs/glycolytic-shift-workflow.md). The work below complements that workflow and does not redo it.
+
+**Screen by cell class** (`celltype_glycolysis.py`; 14 organizer classes, >= 20 cells, CPM + 1 offset, exact permutation tests). In early PE the `LDHA/LDHB` log-ratio is higher than in early controls in nearly every class: +0.7 to +1.7 log2 in nine classes, and about +0.1 to +0.3 in NK and T cells. With 3 early controls, most single-class p-values are above 0.05 (pericyte 0.014, smooth muscle 0.027). The initial idea that macrophages shift more than trophoblast is **not supported**. The shift is broad. This agrees with the workflow pilot (10 of 11 eligible labels positive for both ratios).
+
+**New result: cross-cell-type concordance** (`placenta_wide_concordance.py`). Among the 10 early-PE donors, a donor's rank for `LDHA/LDHB` is preserved across cell classes.
+
+| Measure (early PE, 9 classes) | Mean pairwise Spearman between classes | Null |
+|---|---:|---|
+| `LDHA/LDHB` | **0.73** | 2,000 random pairs of genes expressed in every class: median 0.19, 95th percentile 0.48. 0.9% reach 0.73. |
+| Hypoxia score, 50 genes, four ratio genes removed | **0.56** | 300 size-matched random sets: median 0.15. None reach 0.56. |
+| `PDK1/GOT1` | 0.15 | Not different from null. Both genes are low in this assay (median CPM about 5-25). |
+| `FLT1` | 0.26 | Not different from null: a cell-type-restricted signal, as expected |
+
+- Leave-one-donor-out: 0.62-0.77, so one extreme placenta (PE_early_6) does not carry it.
+- All 26 donors with group means removed: 0.53 for `LDHA/LDHB` (3.3% of null) and 0.47 for the Hypoxia score (1.3% of null).
+- Fine resolution, using the teammate table (23 labels seen in >= 8 of 10 donors): mean 0.54, 95% of label pairs positive, 0.67 within lineage and 0.50 between lineages.
+- Monocytes, which arrive from blood, are the least coupled class (0.40-0.55 with non-macrophage classes).
+
+**Reading.** The glycolytic/hypoxia RNA state looks like a property of the whole placenta that most resident cell types share. That fits a tissue-level driver (for example oxygenation or perfusion) better than a program intrinsic to one cell type. The angiogenic signal (`FLT1`) is cell-type-restricted. This is exploratory.
+
+**What it does not show, and alternatives to state in any write-up.**
+- Sample handling: ischemic time between delivery and processing would shift every cell type in a sample together. The released data cannot exclude this. It is the strongest alternative.
+- Ambient RNA in droplet data can make cell classes look alike.
+- Only one of Ackerman's two ratios shows it. The Hypoxia score is the second line of support.
+- All 3 early controls delivered vaginally and 9 of 10 early PE by cesarean, so PE-vs-control differences are confounded with labor. The within-PE concordance is less exposed to this.
+- n = 10. Thresholds were chosen without a preregistered plan. RNA ratios are not metabolic flux.
+- **SCT caution (from the teammate workflow):** whole-cell data capture mature syncytium poorly, and the single-nucleus SCT estimates are small (+0.08 and +0.54 log2, 3 cases vs. 2 controls). Do not claim the shift is largest in SCT, even though the whole-cell SCT estimate here is the largest (+1.67, p = 0.27).
+
+Candidate headline figure: `PCA/VST DESeq2/results/placenta_wide/placenta_wide_ldha_ldhb.png`.
+
+### 0.3 Other updates
+
+- **GSEA across fits A-F is finished.** Hypoxia and Glycolysis pass in all six. A full run of `pathway_analysis.py` took 163 minutes when two jobs shared the CPU, so do not rerun it casually. `hypoxia_glycolysis_overlap_fit_A.csv` and `cell_class_markers_fit_A.csv` have not been produced yet.
+- Within the 8 bulk EOPE donors, the angiogenic score (`FLT1`, `ENG`) and the Hypoxia score correlate at Spearman 0.93. The donors split 4/4 by run, so treat this as unverified.
+- Context fit G (EOPE+FGR vs. EOPE): 0 genes pass and the benchmarks are near zero, so adding growth restriction does not change the angiogenic signal. Fit I (EOPE vs. TB): benchmarks and Hypoxia are as strong as in A.
+- Literature note supplied by a teammate: glycolytic changes in PE are reported in opposite directions in different cell types (higher in inflammatory macrophages and hypoxic tissue, lower in proliferating trophoblast and endothelial repair). Those citations have **not** been checked in this session. Open each before citing it.
+- A second model (OpenAI Codex, `gpt-6-astra`, read-only) was consulted once for hypothesis ranking. It suggested one more same-run contrast that has not been run: EOPE+FGR vs. FGR (7 vs. 5, later run), with poor delivery-age overlap.
+
+### 0.4 What is still open
+
+1. Decide the lead finding with the team (candidate: 0.2) and build `figures/headline.png` from it.
+2. Extend the concordance check using the workflow's remaining steps: numerator vs. denominator, composition, and the single-nucleus SCT data.
+3. Article, hypothesis card, video and submission folder (section 6, items 5-7).
 
 ---
 
@@ -96,6 +175,19 @@ Method, fixed before results were seen:
 - The benchmarks are **not** in the Hypoxia set (`FLT1` is in no Hallmark set). The Hypoxia result is therefore not just the benchmark genes again. `INHA` and `PGF` are Hypoxia members.
 - **Cell-mix check (organizer workflow step 7a), fit A:** trophoblast markers barely change (`KRT7` +0.06, `CDH1` −0.07, `TP63` −0.12, `ERVW-1` −0.12, `PSG1` −0.05, `CGB` +0.38, `CGA` +0.88 with padj 0.16). On the organizer's decision table, this favors a change within trophoblast over more trophoblast tissue, but the evidence is weak because there are few markers and the data are bulk.
 
+### 4.2b Zeisel/Admati browser lookups (required; done 2026-11-15)
+
+Recorded in `PCA/VST DESeq2/results/browser_lookups.csv`. How the unlabeled plots were read is documented in `results/browser_lookups_README.md`; the layout reading is an inference.
+
+| Gene | Why chosen | Where expressed (browser) | PE vs. control in browser (early onset) |
+|---|---|---|---|
+| `FLT1` | Angiogenic benchmark | Trophoblast-enriched: EVT1/EVT2, SCT-PSG, SCT | Higher in PE within SCT, SCT-PSG, EVT2, EVT1 |
+| `NDRG1` | Hypoxia leading edge | Broad: myeloid, endothelial, pericyte, trophoblast | Higher in PE in VCT2, SCT and several myeloid classes |
+| `HSD17B1` | Robust EOPE-lower gene (log2FC −1.41, passes A–F) | Trophoblast-specific, SCT highest | **Lower** in early-onset PE within VCT and SCT. Late-onset PE is higher in SCT. |
+| `HK2` | Hypoxia + Glycolysis leading edge | Low and sparse, myeloid-enriched | Higher in PE in several myeloid classes |
+
+**Key reading:** in early-onset PE, `FLT1` goes up and `HSD17B1` goes down *within the same SCT class*. A simple increase in syncytiotrophoblast content therefore cannot explain both bulk changes, which supports a within-trophoblast change. Hypoxia-response genes (`NDRG1`, `HK2`) are not trophoblast-specific, so macrophages (including Hofbauer cells) may also contribute. The browser is a different cohort and serves as context only.
+
 ### 4.3 Context comparisons (`context_contrasts.py`), Q1 step 4 (exploratory)
 
 Each is `~ group` on the two groups only, with defaults and selection rule as in A–D. The groups differ in delivery age, and TB has no overlap with the preterm groups.
@@ -107,7 +199,7 @@ Each is `~ group` on the two groups only, with defaults and selection rule as in
 | I | EOPE vs. TB | How does a term-birth control change the answer? |
 | J | EOPE+FGR vs. iPTB | Is the primary pattern also in EOPE with FGR? |
 
-Status: running when this log was written. Fit G's table is saved; H–J and their GSEA were still pending.
+Status: finished. Fits H and J are fully confounded with sequencing run (see 0.1) and should not be interpreted.
 
 ## 5. Output locations
 
@@ -134,7 +226,7 @@ All outputs are under `PCA/VST DESeq2/results/`:
 
 1. **Finish and verify the runs.** Check fits D–F GSEA, the overlap split (does Hypoxia hold without the 65 shared Glycolysis genes?), the donor scores and the context fits G–J. Look at every PNG for label collisions before using it.
 2. **Do the angiogenic and metabolic patterns appear in the same donors?** Use `angiogenic_vs_metabolic_within_EOPE.csv` and its plot. With n = 8 this is descriptive only. Ackerman et al. reported a glycolytic pattern in a *subset* of EOPE placentas, so check for one.
-3. **Three Zeisel browser lookups (required).** Proposed genes: `FLT1` (angiogenic benchmark), `NDRG1` or `HK2` (robust Hypoxia leading edge, high `baseMean`), and one EOPE-lower gene or a gene that tests the cell-mix explanation. For each, record the peak cell class, specificity, any PE vs. control difference in the browser, and notes, in `results/browser_lookups.csv` per the organizer workflow 7b. The browser is supporting context, not validation. **Ask the user before driving Chrome.**
+3. ~~Three Zeisel browser lookups~~ **Done** (four genes, see 4.2b).
 4. **Write up.** Add the pathway and context sections to `PCA/VST DESeq2/README.md` or a new `PATHWAYS.md`, labeling exploratory work.
 5. **Choose the lead finding and headline figure.** The current best candidate is a hypoxia/HIF-target signature (with FLT1) higher in EOPE than iPTB, stable across the delivery-age, S22, S24 and fetal-sex checks. OXPHOS is not supported. Save the figure to `figures/headline.png`. It must show every donor, use plain-language axes and be readable on video.
 6. **Deliverables** (`openbio-datathon-2026/track-01/4-submit.md`): team README, reproducible code, an article with at least four graphs, the hypothesis card, and a video of five minutes or less. The hypothesis card needs a mechanism (for example, placental hypoxia/HIF activation driving `FLT1` and glycolytic genes), alternatives (cell mix, delivery and labor context, read depth, fetal sex), and a falsifying follow-up such as within-class pseudobulk in Admati, isoform-specific sFLT1, or an external cohort (GSE114691).

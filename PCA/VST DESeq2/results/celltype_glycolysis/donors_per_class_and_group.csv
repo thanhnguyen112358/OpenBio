@@ -1,0 +1,15 @@
+cell_class,PE_early,PE_late,control_early,control_late
+b_cell,2,6,2,3
+endothelial_cell,10,7,3,6
+extravillous_trophoblast,7,5,1,2
+hofbauer_cell,10,7,3,6
+macrophage,9,7,3,6
+monocyte,10,7,3,6
+nk_cell,10,7,3,6
+other_immune,5,2,2,1
+pericyte,10,7,3,6
+smooth_muscle_cell,9,7,3,6
+stromal_cell,10,7,3,6
+syncytiotrophoblast,10,7,3,6
+t_cell,8,6,3,6
+villous_cytotrophoblast,10,7,3,6

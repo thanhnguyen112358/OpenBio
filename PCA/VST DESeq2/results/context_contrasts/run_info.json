@@ -1,0 +1,128 @@
+{
+  "exploratory": true,
+  "fits": {
+    "G_EOPE+FGR_vs_EOPE": {
+      "contrast": [
+        "EOPE+FGR",
+        "EOPE"
+      ],
+      "samples": [
+        "S01_VT",
+        "S02_VT",
+        "S03_VT",
+        "S06_VT",
+        "S07_VT",
+        "S12_VT",
+        "S13_VT",
+        "S16_VT",
+        "S17_VT",
+        "S18_VT",
+        "S19_VT",
+        "S20_VT",
+        "S21_VT",
+        "S22_VT",
+        "S25_VT"
+      ],
+      "cooks_cutoff": 6.7009645358807814,
+      "ranking_log": {
+        "tested_genes": 24478,
+        "dropped_unmapped_or_ambiguous": 1545,
+        "dropped_duplicate_hgnc": 64,
+        "ranked_genes": 22869
+      }
+    },
+    "H_FGR_vs_iPTB": {
+      "contrast": [
+        "FGR",
+        "iPTB"
+      ],
+      "samples": [
+        "S04_VT",
+        "S05_VT",
+        "S08_VT",
+        "S09_VT",
+        "S10_VT",
+        "S11_VT",
+        "S14_VT",
+        "S15_VT",
+        "S23_VT",
+        "S24_VT"
+      ],
+      "cooks_cutoff": 8.649110640673515,
+      "ranking_log": {
+        "tested_genes": 17467,
+        "dropped_unmapped_or_ambiguous": 565,
+        "dropped_duplicate_hgnc": 31,
+        "ranked_genes": 16871
+      }
+    },
+    "I_EOPE_vs_TB": {
+      "contrast": [
+        "EOPE",
+        "TB"
+      ],
+      "samples": [
+        "S06_VT",
+        "S07_VT",
+        "S16_VT",
+        "S18_VT",
+        "S19_VT",
+        "S20_VT",
+        "S21_VT",
+        "S22_VT",
+        "S26_VT",
+        "S27_VT",
+        "S28_VT",
+        "S29_VT",
+        "S30_VT"
+      ],
+      "cooks_cutoff": 7.205713350457376,
+      "ranking_log": {
+        "tested_genes": 15482,
+        "dropped_unmapped_or_ambiguous": 373,
+        "dropped_duplicate_hgnc": 23,
+        "ranked_genes": 15086
+      }
+    },
+    "J_EOPE+FGR_vs_iPTB": {
+      "contrast": [
+        "EOPE+FGR",
+        "iPTB"
+      ],
+      "samples": [
+        "S01_VT",
+        "S02_VT",
+        "S03_VT",
+        "S05_VT",
+        "S09_VT",
+        "S10_VT",
+        "S12_VT",
+        "S13_VT",
+        "S17_VT",
+        "S23_VT",
+        "S24_VT",
+        "S25_VT"
+      ],
+      "cooks_cutoff": 7.559432157547899,
+      "ranking_log": {
+        "tested_genes": 16706,
+        "dropped_unmapped_or_ambiguous": 482,
+        "dropped_duplicate_hgnc": 27,
+        "ranked_genes": 16197
+      }
+    }
+  },
+  "python": "3.11.9",
+  "packages": {
+    "pydeseq2": "0.5.4",
+    "gseapy": "1.1.4",
+    "pandas": "2.3.3",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "selection_rule": {
+    "padj": 0.05,
+    "abs_log2fc": 1.0
+  },
+  "gene_sets": "track01_gene_sets.gmt"
+}

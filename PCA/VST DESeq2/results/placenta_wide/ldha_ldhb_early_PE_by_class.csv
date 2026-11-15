@@ -1,0 +1,11 @@
+donor_id,syncytiotrophoblast,villous_cytotrophoblast,hofbauer_cell,macrophage,monocyte,endothelial_cell,stromal_cell,pericyte,smooth_muscle_cell,clinical_group,delivery_mode,ga_delivery_weeks,fgr_status
+PE_early_1,-0.887,-0.4685,1.778,2.451,2.496,2.033,1.626,1.715,1.109,PE_early,c_section,26.4,FGR
+PE_early_10,-4.873,-2.115,0.2718,0.3704,1.64,0.8915,1.204,1.385,0.6634,PE_early,c_section,29.86,no_FGR
+PE_early_2,-0.007578,-0.1529,1.797,2.212,1.247,2.572,1.727,1.776,2.089,PE_early,c_section,34.1,FGR
+PE_early_3,-0.2078,0.1273,2.671,2.686,3.483,2.681,1.777,2.231,1.972,PE_early,c_section,35.86,no_FGR
+PE_early_4,-2.74,-1.576,1.494,,1.327,1.999,1.808,1.85,,PE_early,c_section,33.14,no_FGR
+PE_early_5,-3.287,-1.512,0.5357,1.81,1.911,1.476,0.6044,0.8456,1.003,PE_early,c_section,35.14,FGR
+PE_early_6,2.901,1.692,4.122,4.123,4.882,2.959,3.34,2.989,2.548,PE_early,c_section,32.57,FGR
+PE_early_7,-1.343,-1.063,0.7536,2.895,2.97,1.098,1.618,1.299,1.797,PE_early,vaginal,24.57,FGR
+PE_early_8,-2.352,-1.226,0.4639,1.253,0.5356,1.006,1.064,1.059,1.308,PE_early,c_section,31.86,no_FGR
+PE_early_9,-4.444,-2.261,1.488,1.54,1.277,0.8859,1.596,1.165,0.9099,PE_early,c_section,33.86,FGR
