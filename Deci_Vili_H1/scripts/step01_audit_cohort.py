@@ -42,7 +42,7 @@ CONTROL_GROUPS = {"iPTB", "TB"}
 DONORS_SEQUENCED_WITH_CONTROLS = {"S16", "S20", "S21", "S22"}
 
 
-def verify_source():
+def verify_source(*additional_inputs):
     manifest = SOURCE / "provenance" / "checksums.sha256"
     digests = {
         name: digest
@@ -50,7 +50,7 @@ def verify_source():
             line.split(maxsplit=1) for line in manifest.read_text().splitlines() if line
         )
     }
-    for name in (VT_META, VT_COUNTS, DB_META, DB_COUNTS, HTSEQ):
+    for name in (VT_META, VT_COUNTS, DB_META, DB_COUNTS, HTSEQ, *additional_inputs):
         digest = hashlib.sha256((SOURCE / name).read_bytes()).hexdigest()
         if digest != digests[name]:
             raise ValueError(f"Organizer checksum mismatch: {name}")
