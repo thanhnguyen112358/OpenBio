@@ -1,0 +1,5 @@
+fit,design,n_EOPE,n_iPTB,genes_with_reads,genes_with_padj,genes_passing,higher_in_EOPE,lower_in_EOPE,genes_padj_below_cutoff,genes_with_outlier_count_replaced,genes_pvalue_removed_by_cooks,genes_lfc_not_converged
+A_full,~group,8,5,24424,15453,352,236,116,1172,69,18,0
+B_age_adjusted,~ga_delivery_weeks_centered + group,8,5,24424,15467,383,264,119,1144,0,0,0
+C_shared_age,~group,5,5,24291,13960,321,227,94,926,0,36,0
+D_without_S22,~group,7,5,23157,14684,326,208,118,1193,42,14,0

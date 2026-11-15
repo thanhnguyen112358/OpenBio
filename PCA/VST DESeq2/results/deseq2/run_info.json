@@ -1,0 +1,82 @@
+{
+  "padj_cutoff": 0.05,
+  "abs_log2fc_cutoff": 1.0,
+  "contrast": "EOPE vs. iPTB",
+  "shared_age_window_weeks": [
+    29.857,
+    33.0
+  ],
+  "samples": {
+    "A_full": [
+      "S05_VT",
+      "S06_VT",
+      "S07_VT",
+      "S09_VT",
+      "S10_VT",
+      "S16_VT",
+      "S18_VT",
+      "S19_VT",
+      "S20_VT",
+      "S21_VT",
+      "S22_VT",
+      "S23_VT",
+      "S24_VT"
+    ],
+    "B_age_adjusted": [
+      "S05_VT",
+      "S06_VT",
+      "S07_VT",
+      "S09_VT",
+      "S10_VT",
+      "S16_VT",
+      "S18_VT",
+      "S19_VT",
+      "S20_VT",
+      "S21_VT",
+      "S22_VT",
+      "S23_VT",
+      "S24_VT"
+    ],
+    "C_shared_age": [
+      "S05_VT",
+      "S06_VT",
+      "S07_VT",
+      "S09_VT",
+      "S10_VT",
+      "S16_VT",
+      "S21_VT",
+      "S22_VT",
+      "S23_VT",
+      "S24_VT"
+    ],
+    "D_without_S22": [
+      "S05_VT",
+      "S06_VT",
+      "S07_VT",
+      "S09_VT",
+      "S10_VT",
+      "S16_VT",
+      "S18_VT",
+      "S19_VT",
+      "S20_VT",
+      "S21_VT",
+      "S23_VT",
+      "S24_VT"
+    ]
+  },
+  "cooks_cutoff": {
+    "A_full": 7.205713350457377,
+    "B_age_adjusted": 6.55231255751521,
+    "C_shared_age": 8.649110640673515,
+    "D_without_S22": 7.559432157547899
+  },
+  "python": "3.13.5",
+  "packages": {
+    "pydeseq2": "0.5.4",
+    "pandas": "3.1.1",
+    "numpy": "2.3.1",
+    "scipy": "1.16.0",
+    "scikit-learn": "1.7.0",
+    "anndata": "0.13.4"
+  }
+}

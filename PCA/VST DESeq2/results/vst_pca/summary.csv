@@ -1,0 +1,5 @@
+cohort,transformation,n_samples,n_genes,controls_outside_case_range_on_pc1,n_controls,s22_isolation_ratio,s22_isolation_rank
+eope_vs_iptb,log2(CPM + 1),13,24424,4,5,1.26,1
+eope_vs_iptb,VST,13,24424,4,5,1.297,1
+shared_age,log2(CPM + 1),10,24291,4,5,1.26,1
+shared_age,VST,10,24291,4,5,1.289,1

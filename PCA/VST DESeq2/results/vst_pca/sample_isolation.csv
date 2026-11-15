@@ -1,0 +1,47 @@
+sample_id,cohort,transformation,isolation_ratio,isolation_rank
+S05_VT,eope_vs_iptb,log2(CPM + 1),1.037,5
+S06_VT,eope_vs_iptb,log2(CPM + 1),0.938,13
+S07_VT,eope_vs_iptb,log2(CPM + 1),1.125,2
+S09_VT,eope_vs_iptb,log2(CPM + 1),0.998,8
+S10_VT,eope_vs_iptb,log2(CPM + 1),0.974,10
+S16_VT,eope_vs_iptb,log2(CPM + 1),0.962,11
+S18_VT,eope_vs_iptb,log2(CPM + 1),1.042,4
+S19_VT,eope_vs_iptb,log2(CPM + 1),0.996,9
+S20_VT,eope_vs_iptb,log2(CPM + 1),0.945,12
+S21_VT,eope_vs_iptb,log2(CPM + 1),1.081,3
+S22_VT,eope_vs_iptb,log2(CPM + 1),1.26,1
+S23_VT,eope_vs_iptb,log2(CPM + 1),1.0,7
+S24_VT,eope_vs_iptb,log2(CPM + 1),1.007,6
+S05_VT,eope_vs_iptb,VST,1.031,5
+S06_VT,eope_vs_iptb,VST,0.94,13
+S07_VT,eope_vs_iptb,VST,1.062,3
+S09_VT,eope_vs_iptb,VST,0.995,8
+S10_VT,eope_vs_iptb,VST,0.972,10
+S16_VT,eope_vs_iptb,VST,0.959,11
+S18_VT,eope_vs_iptb,VST,1.056,4
+S19_VT,eope_vs_iptb,VST,1.0,7
+S20_VT,eope_vs_iptb,VST,0.947,12
+S21_VT,eope_vs_iptb,VST,1.093,2
+S22_VT,eope_vs_iptb,VST,1.297,1
+S23_VT,eope_vs_iptb,VST,0.976,9
+S24_VT,eope_vs_iptb,VST,1.009,6
+S05_VT,shared_age,log2(CPM + 1),1.01,4
+S06_VT,shared_age,log2(CPM + 1),0.963,9
+S07_VT,shared_age,log2(CPM + 1),1.164,2
+S09_VT,shared_age,log2(CPM + 1),0.994,6
+S10_VT,shared_age,log2(CPM + 1),0.959,10
+S16_VT,shared_age,log2(CPM + 1),0.968,8
+S21_VT,shared_age,log2(CPM + 1),1.077,3
+S22_VT,shared_age,log2(CPM + 1),1.26,1
+S23_VT,shared_age,log2(CPM + 1),0.977,7
+S24_VT,shared_age,log2(CPM + 1),1.006,5
+S05_VT,shared_age,VST,1.007,5
+S06_VT,shared_age,VST,0.966,8
+S07_VT,shared_age,VST,1.107,2
+S09_VT,shared_age,VST,0.993,6
+S10_VT,shared_age,VST,0.959,9
+S16_VT,shared_age,VST,0.967,7
+S21_VT,shared_age,VST,1.092,3
+S22_VT,shared_age,VST,1.289,1
+S23_VT,shared_age,VST,0.956,10
+S24_VT,shared_age,VST,1.009,4
