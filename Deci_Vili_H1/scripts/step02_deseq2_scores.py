@@ -28,6 +28,15 @@ C1Q = ["C1QA", "C1QB", "C1QC"]
 MYELOID = ["CD68", "LST1", "CSF1R"]
 
 
+def score_panel(logged):
+    score = pd.DataFrame(index=logged.index)
+    score["c1q"] = logged[C1Q].mean(axis=1)
+    score["trem2"] = logged["TREM2"]
+    score["c1q_trem2"] = (score["c1q"] + score["trem2"]) / 2
+    score["broad_myeloid"] = logged[MYELOID].mean(axis=1)
+    return score
+
+
 def dataset(counts, metadata, design, inference):
     return DeseqDataSet(
         counts=counts,
@@ -52,11 +61,7 @@ def normalize_tissue(count_file, donors, tissue, inference):
         dds.layers["normed_counts"], index=raw.index, columns=raw.columns
     ).loc[:, list(PANEL)]
     logged = np.log2(normalized + 1)
-    score = pd.DataFrame(index=raw.index)
-    score["c1q"] = logged[C1Q].mean(axis=1)
-    score["trem2"] = logged["TREM2"]
-    score["c1q_trem2"] = (score["c1q"] + score["trem2"]) / 2
-    score["broad_myeloid"] = logged[MYELOID].mean(axis=1)
+    score = score_panel(logged)
     score["size_factor"] = factors
     score.index = donors.index
 
