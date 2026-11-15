@@ -24,3 +24,9 @@ In a new EOPE-only and isolated-FGR cohort matched on delivery age and labor, co
 ## Figures for the datathon
 
 Lead with the tissue and marker effects to show the two tissue estimates and the uncertainty around the decidual marker comparison. Use the paired donor scores, cohort and donor sensitivity plot, and villous hypoxia overlap plot to show how individual pregnancies and the available score overlap shape the interpretation. [Tissue and marker effects](../step03_paired_effects/figures/tissue_and_marker_effects.png) · [Paired scores by pregnancy](../step03_paired_effects/figures/paired_donor_scores.png) · [Cohort and donor sensitivity](../step03_paired_effects/figures/paired_effect_sensitivity.png) · [Villous hypoxia overlap](../step04_hypoxia_context/figures/hypoxia_vs_decidual_score.png)
+
+## Exploratory follow-up in the organizer data
+
+The combined EOPE+FGR group provides a comparison in which both groups have FGR. In the complete pairs, its average composite score was lower than isolated FGR in both tissues, with an estimated extra decidual difference of just −0.03 log₂ units. The decidual score relative to broad myeloid markers was also closer to zero and changed sign after restricting to the shared delivery-age range. This limits how far the initial within-decidua lead can be extended across clinical phenotypes. [Combined-group follow-up](../followup_fgr_context/README.md)
+
+The single-cell reference gave a lower composite in broad macrophages and a higher composite in Hofbauer cells in EOPE-only versus early controls. Delivery mode was completely separated by group in that comparison, and the atlas has no isolated-FGR arm. The class-specific directions add context for the bulk score. [Pseudobulk follow-up](../followup_fgr_context/pseudobulk/README.md)
