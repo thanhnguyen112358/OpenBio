@@ -10,7 +10,8 @@ The page is written for a reader who is new to RNA-seq. Every plot is shown with
 - **The four genes named in advance** (`FLT1`, `ENG`, `LEP`, `INHBA`) are all higher in EOPE in every version.
 - **Delivery age does not explain the result.** The fold changes barely move when delivery age is adjusted for or when only pregnancies of matching delivery age are compared.
 - **S22 is an unusual sample with little influence.** Leaving it out changes the direction of none of the 352 genes. It stays in the main analysis.
-- **Open concerns.** The study has 13 pregnancies. One control (S24) pulls on many genes, read depth differs between the groups, and fetal sex is unbalanced and not yet modelled.
+- **One control, S24, looks partly like EOPE.** It makes the differences look smaller, not larger. Without it, 458 genes pass instead of 352, and known preeclampsia genes such as `HTRA4` and `PAPPA2` rise into the top 10 (exploratory, [section 10](#10-exploratory-re-ranking-the-candidates-with-and-without-s24)).
+- **Open concerns.** The study has 13 pregnancies, read depth differs between the groups, and fetal sex is unbalanced and not yet modelled.
 
 ## Contents
 
@@ -23,9 +24,10 @@ The page is written for a reader who is new to RNA-seq. Every plot is shown with
 7. [What DESeq2 does and why we use it](#7-what-deseq2-does-and-why-we-use-it)
 8. [Gene-level results](#8-gene-level-results)
 9. [Does S22 drive the result?](#9-does-s22-drive-the-result)
-10. [What to carry forward](#10-what-to-carry-forward)
-11. [Plots the Q1 plan asks for](#11-plots-the-q1-plan-asks-for)
-12. [Glossary](#glossary)
+10. [Exploratory: re-ranking the candidates, with and without S24](#10-exploratory-re-ranking-the-candidates-with-and-without-s24)
+11. [What to carry forward](#11-what-to-carry-forward)
+12. [Plots the Q1 plan asks for](#12-plots-the-q1-plan-asks-for)
+13. [Glossary](#glossary)
 
 ## 1. Background
 
@@ -60,9 +62,10 @@ python -m pip install -r openbio-datathon-2026/environment/requirements.txt
 cd "PCA/VST DESeq2"
 python vst_pca.py        # delivery age, sequencing quality, and PCA: about 30 seconds
 python deseq2_fits.py    # DESeq2 fits: about 2 minutes
+python rank_candidates.py   # exploratory re-ranking and the fit without S24: about 30 seconds
 ```
 
-Both scripts read the three released organizer files and write every table and plot under `results/`. Nothing is entered by hand. [`common.py`](common.py) holds the shared loading checks and cohort definitions. Package versions and the sample IDs in each fit are recorded in [`run_info.json`](results/deseq2/run_info.json).
+The scripts read the three released organizer files and write every table and plot under `results/`. Nothing is entered by hand. [`common.py`](common.py) holds the shared loading checks and cohort definitions. Package versions and the sample IDs in each fit are recorded in [`run_info.json`](results/deseq2/run_info.json).
 
 ## 3. Choices fixed before looking at gene results
 
@@ -370,16 +373,107 @@ S22 is kept in fit A, and fit D is reported beside it as the check.
 
 **How to report it.** One EOPE sample (S22) had low gene-assigned read depth and an unusual expression profile. It was kept in the primary analysis. Excluding it left all 352 genes in the same direction and 290 still passing. The 207 genes that pass in all four fits do not depend on S22 or on the delivery-age checks, so they are the list to lead with.
 
-## 10. What to carry forward
+## 10. Exploratory: re-ranking the candidates, with and without S24
 
-- **S24 is the donor to check next.** This iPTB control overlaps the EOPE range on PC1 and is the highest control for all four benchmark genes (Figure 12). It has the largest Cook's distance for 16.2% of tested genes, about twice an equal share, for 73 of the 352 fit A genes, and for all four benchmark genes in fit A. A leave-S24-out refit would measure its influence in the same way as fit D. That refit has not been run.
+Nothing in this section was planned before the results were seen, so it should be reported as exploratory. Fit A remains the main result. [Ranking table](results/candidates/candidate_ranking.csv) · [Top 10 lists](results/candidates/top10_by_method.csv) · [Fit E table](results/candidates/fit_E_without_S24.csv) · [Script](rank_candidates.py)
+
+### Why re-rank
+
+The volcano plot (Figure 10) ranks genes two ways at once, and they disagree. Height ranks by evidence, which favors consistent genes even when the difference is only 2-fold. Distance from the center ranks by size, which favors genes whose controls have almost no reads. A teammate proposed combining the two into a single score to find genes that are both large and believable. The four benchmark genes are already significant: `ENG` is 8th of 15,453 tested genes by evidence and `LEP` has the second-largest fold change of the 352 passing genes. The question is which genes rank above them, and why.
+
+### The two scores
+
+Both scores rank only the genes that pass the prespecified cutoffs in a fit.
+
+- **70/30 weighted score (the teammate's proposal).** The absolute log₂ fold change and the evidence (−log₁₀ `padj`) are each rescaled from 0 (lowest passing gene) to 1 (highest). The score is 0.7 × the fold-change part + 0.3 × the evidence part. The weights express a preference for large effects. They are a choice, not something the data determine.
+- **Conservative fold change.** The end of the gene's 95% interval nearest zero: the smallest difference the data still support. It is large only when the fold change is large and precisely measured, so it needs no weights.
+
+Each score was computed twice: in fit A, and in **fit E**, which is fit A without S24, the same check that fit D made for S22.
+
+### What fit E shows about S24
+
+S24 is the iPTB control that sat among the EOPE samples on the PCA (Figure 5) and was the highest control for all four benchmark genes (Figure 12). It has the largest Cook's distance for 16.2% of tested genes, about twice an equal share, for 73 of the 352 fit A genes, and for all four benchmark genes in fit A.
+
+| | Fit A, with S24 | Fit E, without S24 |
+| --- | ---: | ---: |
+| Genes passing | 352 | 458 |
+| `FLT1` log₂ fold change | 3.12 | 3.48 |
+| `ENG` | 2.22 | 2.49 |
+| `LEP` | 5.56 | 8.80 |
+| `INHBA` | 2.06 | 2.66 |
+
+All 352 fit A genes keep their direction without S24, and 308 still pass. Seventy percent of them get a larger fold change, and three move outside fit A's 95% interval. Across well-measured genes the two fits correlate at `r = 0.95`, lower than the `0.98` for S22. S24 therefore has more influence than S22, and it pushes in one direction: it makes the EOPE–iPTB differences look smaller. Its effect on `LEP` is the largest, from about 47-fold to about 450-fold.
+
+To describe where S24 sits for each gene, the table gives an **S24 position**: 0 means S24 matches the median of the other four controls and 1 means it matches the EOPE median, on a log scale. Across the 352 passing genes the median is 0.30. For a third of them S24 is more than halfway to EOPE. The measure is unstable when the two groups are close together. Its extreme of −17 belongs to `PENK`, a low-count gene.
+
+### Top 10 in fit A
+
+Both scores pick the same ten genes, in a slightly different order.
+
+| Gene | Conservative rank | Weighted rank | Fold change (95% interval) | `padj` | `baseMean` | S24 position | Fits passing, A–D |
+| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: |
+| `KCNF1` | 1 | 1 | about 185× (21× to 1,590×) | 3.4 × 10⁻⁴ | 50 | 0.00 | 4 |
+| `LEP` | 2 | 3 | about 47× (11× to 206×) | 8.8 × 10⁻⁵ | 21,950 | 0.67 | 4 |
+| `ARMS2` | 3 | 4 | about 25× (10× to 63×) | 1.3 × 10⁻⁸ | 367 | 0.46 | 4 |
+| `NTRK2` | 4 | 2 | about 17× (10× to 29×) | 2.5 × 10⁻¹⁹ | 241 | −0.01 | 4 |
+| `LOC101927053` | 5 | 6 | about 18× (6× to 54×) | 7.3 × 10⁻⁵ | 37 | −0.34 | 4 |
+| `CP` | 6 | 9 | about 12× (5× to 28×) | 1.6 × 10⁻⁶ | 91 | 0.32 | 4 |
+| `TVP23A` | 7 | 5 | about 27× (5× to 136×) | 3.1 × 10⁻³ | 11 | 0.21 | 3 |
+| `CLC` | 8 | 10 | about 13× (5× to 34×) | 9.1 × 10⁻⁵ | 21 | −0.04 | 3 |
+| `ISLR2` | 9 | 8 | about 18× (5× to 69×) | 1.6 × 10⁻³ | 10 | 0.58 | 3 |
+| `SERPINA3` | 10 | 7 | about 20× (5× to 89×) | 3.7 × 10⁻³ | 213 | 0.80 | 3 |
+
+All ten are higher in EOPE. The conservative score did not remove the low-count genes. `KCNF1` still ranks first, because even the low end of its interval is 21-fold. Five of the ten have a `baseMean` below 60, which means only tens of reads. Their exact fold changes are likely overstated, because these are the default DESeq2 estimates without the optional shrinkage step.
+
+![Top 10 candidates under each ranking, with and without S24](results/candidates/ranking_comparison.png)
+
+**Figure 15. Where each ranking's top 10 sit on the volcano plot.** Left: fit A. Right: fit E, without S24. Gray dots are the passing genes. Blue circles are the conservative top 10 and orange squares the weighted top 10. Only passing genes are shown, so the middle strip is empty.
+
+**How to read it.** In both panels the top 10 sit at the right: every candidate is higher in EOPE. Both rankings skip the tall genes near the 2-fold line, such as `LEPROTL1`. In the right panel, `LEP`, `HTRA4`, and `PAPPA2` climb much higher once S24 is out.
+
+![Top candidates in each pregnancy, fit A](results/candidates/top_candidates_expression.png)
+
+**Figure 16. The ten fit A candidates in each pregnancy.** Orange dots are EOPE pregnancies, blue dots are the other four controls, and the red star is S24. The scale is logarithmic.
+
+**How to read it.** Look at where the red star sits for each gene. The candidates split into two kinds.
+
+- **S24 looks like a control.** For `KCNF1`, `NTRK2`, `CLC`, and `LOC101927053`, the star sits with the other blue dots. These genes separate EOPE from all five controls, so S24 does not affect them.
+- **S24 looks partly like EOPE.** For `LEP`, `SERPINA3`, `ISLR2`, and `ARMS2`, the star sits well above the other controls, between them and the EOPE pregnancies.
+
+### Genes that reach the top 10 only without S24
+
+Three of each top-10 list change without S24. `HTRA4`, `ADAM2`, `PAPPA2`, and `LTF` enter, and `LOC101927053`, `CLC`, `CP`, and `TVP23A` drop out of one list or both.
+
+![Genes that reach the top 10 only without S24](results/candidates/top_candidates_only_without_s24.png)
+
+**Figure 17. The genes that enter the top 10 without S24, in each pregnancy.** The layout matches Figure 16. Ranks are from fit E.
+
+**How to read it.** In all four panels the red star sits far above the other controls and close to the EOPE pregnancies. S24's position is 0.64 for `HTRA4`, 0.59 for `ADAM2`, 0.85 for `PAPPA2`, and 0.95 for `LTF`. For these genes S24 looks almost like an EOPE placenta, which pulls the control average up and hides part of the difference.
+
+| Gene | Fit A fold change, rank (conservative, weighted) | Fit E fold change, rank (conservative, weighted) |
+| --- | --- | --- |
+| `HTRA4` | about 8.9×, 13th, 14th | about 17×, 5th, 3rd |
+| `ADAM2` | about 12×, 11th, 11th | about 18×, 8th, 12th |
+| `PAPPA2` | about 3.7×, 58th, 77th | about 6.7×, 17th, 8th |
+| `LTF` | about 11×, does not pass (`padj` 0.053) | about 31×, 10th, 10th |
+
+### What this means
+
+- **The leading genes do not depend on the ranking method.** Both scores give the same fit A top 10. `NTRK2` and `ARMS2` are the strongest candidates that are not among the benchmark genes: both pass in all four fits A–D, and both have high read counts.
+- **S24 makes the analysis cautious.** Among the genes most affected by S24 are `HTRA4` and `PAPPA2`, which published studies have reported as raised in preeclamptic placentas, along with `LEP`. This exploratory analysis did not test that link. One interpretation is that S24's placenta shares part of the preeclampsia pattern without the mother having developed the disease. Ordinary variation between pregnancies is the other. These data cannot separate the two.
+- **S24 stays in the main analysis.** The rule set in advance was no exclusions, and removing a control because it resembles the cases would make the result look stronger than the data support. Fit A is the conservative estimate. Fit E shows how much one control can hide.
+- **Low-count candidates need caution.** `KCNF1`, `TVP23A`, `ISLR2`, and `CLC` have large fold changes built on tens of reads. For quoting effect sizes, prefer high-count genes such as `LEP`, `NTRK2`, `ARMS2`, `SERPINA3`, and `HTRA4`.
+
+## 11. What to carry forward
+
+- **S24 has the most influence of any pregnancy, and it lowers the estimates.** Section 10 measures it with fit E. Report fit E beside fit A as a sensitivity check, and do not quote `LEP`'s fold change as precise.
 - **Read depth and group overlap in this cohort.** DESeq2's size factors adjust counts for depth. They cannot separate a library-quality difference that travels with depth from a group difference.
 - **Fetal sex is unbalanced and not modelled.** EOPE has 6 female and 2 male pregnancies and iPTB has 2 female and 3 male. A fit that includes fetal sex has not been run.
 - **Outlier handling differs between fits.** DESeq2 replaces extreme counts only in groups of seven or more identical design rows. It replaced counts for 69 genes in fit A and 42 in fit D, and none in fit C, where both groups have five donors. Fit B has a continuous covariate, so no two donors share a design row and neither the replacement nor the outlier p-value rule applies there.
 - **Delivery age was centered in fit B.** Subtracting the cohort mean leaves the group estimate unchanged. With uncentered weeks, 56 genes failed to converge. None of them passed the cutoffs.
 - **Scope of the estimates.** These are associations at delivery relative to spontaneous iPTB, where labor and delivery context can also contribute. Bulk villous RNA cannot separate a change in cell mix from a change within cells.
 
-## 11. Plots the Q1 plan asks for
+## 12. Plots the Q1 plan asks for
 
 Status against the [Q1 analysis plan](../../Q01-placental-gene-expression.md#analysis) and its figure list.
 
