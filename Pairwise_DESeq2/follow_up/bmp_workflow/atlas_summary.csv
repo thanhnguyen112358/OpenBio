@@ -1,0 +1,127 @@
+"cell_class","symbol","donors_released","donors_eligible","status","median_cpm","fraction_ge10"
+"b_cell","BMPR1B",26,13,"reported",0,0
+"b_cell","BMPR2",26,13,"reported",4.03785896566205,0.0769230769230769
+"b_cell","GREM2",26,13,"reported",0,0
+"b_cell","INHA",26,13,"reported",0,0
+"b_cell","INHBA",26,13,"reported",0,0.153846153846154
+"b_cell","SMAD4",26,13,"reported",33.9052831696596,0.692307692307692
+"b_cell","SMAD9",26,13,"reported",0,0
+"decidual_macrophage","BMPR1B",0,0,"class absent",,
+"decidual_macrophage","BMPR2",0,0,"class absent",,
+"decidual_macrophage","GREM2",0,0,"class absent",,
+"decidual_macrophage","INHA",0,0,"class absent",,
+"decidual_macrophage","INHBA",0,0,"class absent",,
+"decidual_macrophage","SMAD4",0,0,"class absent",,
+"decidual_macrophage","SMAD9",0,0,"class absent",,
+"decidual_nk_cell","BMPR1B",0,0,"class absent",,
+"decidual_nk_cell","BMPR2",0,0,"class absent",,
+"decidual_nk_cell","GREM2",0,0,"class absent",,
+"decidual_nk_cell","INHA",0,0,"class absent",,
+"decidual_nk_cell","INHBA",0,0,"class absent",,
+"decidual_nk_cell","SMAD4",0,0,"class absent",,
+"decidual_nk_cell","SMAD9",0,0,"class absent",,
+"decidual_stromal_cell","BMPR1B",0,0,"class absent",,
+"decidual_stromal_cell","BMPR2",0,0,"class absent",,
+"decidual_stromal_cell","GREM2",0,0,"class absent",,
+"decidual_stromal_cell","INHA",0,0,"class absent",,
+"decidual_stromal_cell","INHBA",0,0,"class absent",,
+"decidual_stromal_cell","SMAD4",0,0,"class absent",,
+"decidual_stromal_cell","SMAD9",0,0,"class absent",,
+"endothelial_cell","BMPR1B",26,26,"reported",0,0
+"endothelial_cell","BMPR2",26,26,"reported",427.868454527131,1
+"endothelial_cell","GREM2",26,26,"reported",0.22350618978689,0.0769230769230769
+"endothelial_cell","INHA",26,26,"reported",0,0.115384615384615
+"endothelial_cell","INHBA",26,26,"reported",0.633895806920925,0.307692307692308
+"endothelial_cell","SMAD4",26,26,"reported",66.283777031723,1
+"endothelial_cell","SMAD9",26,26,"reported",137.70003027118,1
+"extravillous_trophoblast","BMPR1B",24,15,"reported",11.2925659156483,0.333333333333333
+"extravillous_trophoblast","BMPR2",24,15,"reported",116.981655644093,1
+"extravillous_trophoblast","GREM2",24,15,"reported",1.68366608187331,0.0666666666666667
+"extravillous_trophoblast","INHA",24,15,"reported",142.242868821116,1
+"extravillous_trophoblast","INHBA",24,15,"reported",69.7873651178684,0.866666666666667
+"extravillous_trophoblast","SMAD4",24,15,"reported",45.1830289196487,1
+"extravillous_trophoblast","SMAD9",24,15,"reported",0.787964938712087,0.0666666666666667
+"hofbauer_cell","BMPR1B",26,26,"reported",0,0
+"hofbauer_cell","BMPR2",26,26,"reported",62.5703239349059,1
+"hofbauer_cell","GREM2",26,26,"reported",0,0.0384615384615385
+"hofbauer_cell","INHA",26,26,"reported",0,0.0384615384615385
+"hofbauer_cell","INHBA",26,26,"reported",8.28586260976625,0.769230769230769
+"hofbauer_cell","SMAD4",26,26,"reported",40.1261584024987,1
+"hofbauer_cell","SMAD9",26,26,"reported",0,0
+"macrophage","BMPR1B",26,25,"reported",0,0
+"macrophage","BMPR2",26,25,"reported",47.523999619808,0.96
+"macrophage","GREM2",26,25,"reported",0,0
+"macrophage","INHA",26,25,"reported",0,0
+"macrophage","INHBA",26,25,"reported",46.7694875862987,0.96
+"macrophage","SMAD4",26,25,"reported",28.72170463317,0.92
+"macrophage","SMAD9",26,25,"reported",0.175827019971136,0.04
+"monocyte","BMPR1B",26,26,"reported",0,0
+"monocyte","BMPR2",26,26,"reported",24.758968975313,0.884615384615385
+"monocyte","GREM2",26,26,"reported",0,0
+"monocyte","INHA",26,26,"reported",0,0
+"monocyte","INHBA",26,26,"reported",17.903788424026,0.615384615384615
+"monocyte","SMAD4",26,26,"reported",27.8940025774633,0.807692307692308
+"monocyte","SMAD9",26,26,"reported",0,0
+"nk_cell","BMPR1B",26,26,"reported",0,0
+"nk_cell","BMPR2",26,26,"reported",20.2747239148874,0.692307692307692
+"nk_cell","GREM2",26,26,"reported",0,0.0769230769230769
+"nk_cell","INHA",26,26,"reported",0,0
+"nk_cell","INHBA",26,26,"reported",0,0.153846153846154
+"nk_cell","SMAD4",26,26,"reported",29.2449333995033,0.961538461538462
+"nk_cell","SMAD9",26,26,"reported",0,0.0769230769230769
+"other_immune","BMPR1B",26,10,"reported",0,0
+"other_immune","BMPR2",26,10,"reported",30.0104746618141,0.5
+"other_immune","GREM2",26,10,"reported",0,0
+"other_immune","INHA",26,10,"reported",0,0
+"other_immune","INHBA",26,10,"reported",18.0871150624502,0.6
+"other_immune","SMAD4",26,10,"reported",28.347571276861,0.7
+"other_immune","SMAD9",26,10,"reported",0,0
+"pericyte","BMPR1B",26,26,"reported",3.25861594724015,0.5
+"pericyte","BMPR2",26,26,"reported",126.453880493673,1
+"pericyte","GREM2",26,26,"reported",0,0.0769230769230769
+"pericyte","INHA",26,26,"reported",0,0
+"pericyte","INHBA",26,26,"reported",1.15330283999979,0.269230769230769
+"pericyte","SMAD4",26,26,"reported",48.298657698801,1
+"pericyte","SMAD9",26,26,"reported",11.3035516050823,0.846153846153846
+"perivascular_cell","BMPR1B",0,0,"class absent",,
+"perivascular_cell","BMPR2",0,0,"class absent",,
+"perivascular_cell","GREM2",0,0,"class absent",,
+"perivascular_cell","INHA",0,0,"class absent",,
+"perivascular_cell","INHBA",0,0,"class absent",,
+"perivascular_cell","SMAD4",0,0,"class absent",,
+"perivascular_cell","SMAD9",0,0,"class absent",,
+"smooth_muscle_cell","BMPR1B",26,25,"reported",0,0
+"smooth_muscle_cell","BMPR2",26,25,"reported",120.367464674299,1
+"smooth_muscle_cell","GREM2",26,25,"reported",0,0
+"smooth_muscle_cell","INHA",26,25,"reported",0,0
+"smooth_muscle_cell","INHBA",26,25,"reported",75.3701211305518,1
+"smooth_muscle_cell","SMAD4",26,25,"reported",50.6548037940448,0.96
+"smooth_muscle_cell","SMAD9",26,25,"reported",46.1133974203954,0.92
+"stromal_cell","BMPR1B",26,26,"reported",0,0
+"stromal_cell","BMPR2",26,26,"reported",68.2204520296254,1
+"stromal_cell","GREM2",26,26,"reported",0.254903554001557,0.0384615384615385
+"stromal_cell","INHA",26,26,"reported",1.13412083637855,0.423076923076923
+"stromal_cell","INHBA",26,26,"reported",2.88223356140651,0.653846153846154
+"stromal_cell","SMAD4",26,26,"reported",53.5160411855128,1
+"stromal_cell","SMAD9",26,26,"reported",8.16821636818866,0.923076923076923
+"syncytiotrophoblast","BMPR1B",26,26,"reported",0,0
+"syncytiotrophoblast","BMPR2",26,26,"reported",42.9452221250403,1
+"syncytiotrophoblast","GREM2",26,26,"reported",285.411587265972,1
+"syncytiotrophoblast","INHA",26,26,"reported",27.4889753508681,1
+"syncytiotrophoblast","INHBA",26,26,"reported",73.8068807497165,0.961538461538462
+"syncytiotrophoblast","SMAD4",26,26,"reported",26.8268239335473,1
+"syncytiotrophoblast","SMAD9",26,26,"reported",0,0
+"t_cell","BMPR1B",26,23,"reported",0,0
+"t_cell","BMPR2",26,23,"reported",14.7732701904068,0.478260869565217
+"t_cell","GREM2",26,23,"reported",0,0
+"t_cell","INHA",26,23,"reported",0,0
+"t_cell","INHBA",26,23,"reported",0,0.130434782608696
+"t_cell","SMAD4",26,23,"reported",25.1894185696394,0.565217391304348
+"t_cell","SMAD9",26,23,"reported",0,0
+"villous_cytotrophoblast","BMPR1B",26,26,"reported",0.73089847699906,0.192307692307692
+"villous_cytotrophoblast","BMPR2",26,26,"reported",36.5248818910988,1
+"villous_cytotrophoblast","GREM2",26,26,"reported",6.4527492430239,1
+"villous_cytotrophoblast","INHA",26,26,"reported",6.85277049031867,0.961538461538462
+"villous_cytotrophoblast","INHBA",26,26,"reported",0.453586285443664,0.269230769230769
+"villous_cytotrophoblast","SMAD4",26,26,"reported",40.7948609130794,1
+"villous_cytotrophoblast","SMAD9",26,26,"reported",0.506091970985107,0.153846153846154
