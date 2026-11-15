@@ -21,7 +21,7 @@ Ackerman et al. report two sequencing rounds and identify four EOPE-only donors 
 
 ## 2. Calculate two fixed RNA scores in both tissues
 
-1. Estimate DESeq2 median-ratio size factors within each tissue, using genome-wide raw counts for the same 13 EOPE-only and isolated-FGR pregnancies. Transform each normalized count as `log2(normalized count + 1)`. Use the same genes and weights in both tissues. Keep the normalized values fixed when comparing the three donor subsets.
+1. Run PyDESeq2 median-ratio normalization within each tissue, using genome-wide raw counts for the same 13 EOPE-only and isolated-FGR pregnancies. PyDESeq2 estimates one scaling factor per library and divides the raw counts by that factor. Transform each resulting count as `log2(normalized count + 1)`. Use the same genes and weights in both tissues and keep the normalized values fixed across all four cohorts. [Normalization and donor scores](results/step02_deseq2/README.md)
 2. Calculate both scores for each donor and tissue using the transformed values.
 
 | Score | Definition |
@@ -54,4 +54,6 @@ Ackerman et al. report two sequencing rounds and identify four EOPE-only donors 
 
 Use the paired donor contrast as the headline figure if the pattern holds. Build three supporting graphs showing cohort overlap, separate tissue and marker effects, and sensitivity estimates. A follow-up cohort could compare decidual macrophage abundance, subtype composition, and apoptotic trophoblast uptake per macrophage between EOPE-only and isolated-FGR pregnancies matched on delivery age and labor. [Track 1 submission guide](../openbio-datathon-2026/track-01/4-submit.md)
 
-**Step 1 status.** The metadata joins, paired donor counts, sequencing QC, delivery-age overlap, and panel coverage have been audited. All seven genes reach at least 10 raw reads in at least 10 of the 13 target pregnancies in each tissue. Sample-level sequencing assignments remain provisional. Phenotype effect estimates begin in Step 3. [Step 1 audit](results/step01_cohort_audit/README.md)
+**Step 1 status.** The metadata joins, paired donor counts, sequencing QC, delivery-age overlap, and panel coverage have been audited. All seven genes reach at least 10 raw reads in at least 10 of the 13 target pregnancies in each tissue. Sample-level sequencing assignments remain provisional. [Step 1 audit](results/step01_cohort_audit/README.md)
+
+**Step 2 status.** The normalized panel and scores are available for all 13 target pregnancies. The raw-count gene-level fits provide per-tissue and donor-blocked contrasts alongside the per-donor scores. The score-based inference and sensitivity assessment are specified in Step 3. [Step 2 analysis](results/step02_deseq2/README.md)
