@@ -22,9 +22,13 @@ We also ranked genes by the strength and direction of their differences. B M P g
 
 We used a placental reference to ask which cells express these genes. Larger dots mean a higher share of donors had at least ten reads. Darker dots show higher RNA levels. Two genes, B M P R two and SMAD nine, were strongest in cells lining blood vessels. The antagonist GREM two was strongest in the outer trophoblast layer. The reference had no isolated growth restriction comparison group. Changes in cell proportions could account for some of the difference seen in bulk tissue.
 
+### What the marker check found
+
+We used RNA markers for blood-vessel cells and the outer trophoblast layer as rough measures of cell abundance. After adding both to the model, the estimated difference was still positive, with a wider interval that includes zero. B M P R two stayed higher after accounting for blood-vessel marker RNA. SMAD nine followed those markers more closely.
+
 ### What to measure next
 
-These results describe RNA at delivery. Timing, growth restriction severity, labor, delivery mode and cell composition may all matter. A new cohort with comparable delivery ages could measure activated SMAD proteins inside specific cells and count those cell types in the same placental sections. If the higher RNA score accompanies a shift in cell proportions with similar signaling inside each cell type, that would weaken the proposed within-cell mechanism.
+In a new cohort with comparable delivery ages, we predict higher B M P R two RNA inside the cells lining villous blood vessels. We would count the cell types in the same sections to see how much of the bulk RNA difference they explain. We would also measure phosphorylated SMAD inside the nuclei to see whether signaling differs.
 
 ### Data and acknowledgments
 

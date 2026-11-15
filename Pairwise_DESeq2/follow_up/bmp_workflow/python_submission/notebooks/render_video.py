@@ -15,6 +15,7 @@ SCENES = [
     ("Pregnancy-level results", "headline.png"),
     ("Gene ranking", "enrichment.png"),
     ("Where the RNA appears", "atlas.png"),
+    ("What the marker check found", "composition.png"),
     ("What to measure next", None),
     ("Data and acknowledgments", None),
 ]
@@ -51,7 +52,7 @@ def card(scene, figures, path):
             draw.text((152, 245), "Measure signaling inside cells", font=font(77, True), fill=INK)
             for row, text in enumerate([
                 "Compare the two FGR groups at similar delivery ages.",
-                "Measure nuclear pSMAD1/5/9 and pSMAD2/3 by cell type.",
+                "Measure endothelial BMPR2 RNA and nuclear pSMAD.",
                 "Count the relative abundance of the same cell types.",
             ]):
                 y = 410 + row * 112

@@ -7,6 +7,7 @@ EOPE+FGR minus isolated-FGR difference from a linear model with an HC3
 interval, matching the Piekos sensitivity.
 """
 
+import argparse
 from pathlib import Path
 
 import matplotlib
@@ -44,6 +45,15 @@ MODELS = [
     ("both_markers_and_age", ["endothelial", "syncytiotrophoblast", "ga_delivery_weeks"]),
     ("both_markers_and_perivascular", ["endothelial", "syncytiotrophoblast", "perivascular"]),
 ]
+GENE_MARKERS = {
+    "BMPR1A": "endothelial",
+    "BMPR1B": "endothelial",
+    "BMPR2": "endothelial",
+    "SMAD1": "endothelial",
+    "SMAD5": "endothelial",
+    "SMAD9": "endothelial",
+    "GREM2": "syncytiotrophoblast",
+}
 INK = "#182D3D"
 MUTED = "#4D6271"
 TEAL = "#005E68"
@@ -71,9 +81,13 @@ def panel_score(log_counts, genes):
 
 
 def main():
-    counts = read_counts(DATA / "track01_counts_vt.csv")
-    meta = pd.read_csv(DATA / "track01_metadata_vt.csv").set_index("sample_id")
-    published = pd.read_csv(SCORES)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", type=Path, default=DATA, help="Organizer Track 1 data directory")
+    parser.add_argument("--scores", type=Path, default=SCORES, help="BMP donor scores from run.py")
+    args = parser.parse_args()
+    counts = read_counts(args.data / "track01_counts_vt.csv")
+    meta = pd.read_csv(args.data / "track01_metadata_vt.csv").set_index("sample_id")
+    published = pd.read_csv(args.scores)
     published = published.loc[published.cohort.eq("OpenBio")].set_index("sample_id")
     factors = median_ratio_size_factors(counts)
     if not np.allclose(factors.loc[published.index], published.size_factor):
@@ -112,6 +126,21 @@ def main():
         })
     effects = pd.DataFrame(rows)
     effects.to_csv(OUT / "composition_effects.csv", index=False)
+
+    gene_rows = []
+    for gene, marker in GENE_MARKERS.items():
+        expression = log_counts.loc[gene, primary.index]
+        design = np.column_stack([np.ones(len(primary)), primary.combined, primary[marker]])
+        correlation = expression.corr(primary[marker])
+        gene_rows.append({
+            "gene": gene, "method": "welch", "marker_score": marker,
+            "marker_pearson_r": correlation, **welch_effect(expression[case], expression[~case]),
+        })
+        gene_rows.append({
+            "gene": gene, "method": "hc3", "marker_score": marker,
+            "marker_pearson_r": correlation, **hc3(expression.to_numpy(), design),
+        })
+    pd.DataFrame(gene_rows).to_csv(OUT / "composition_gene_effects.csv", index=False)
 
     bmp_check = welch_effect(primary.loc[case, "bmp27"], primary.loc[~case, "bmp27"])["effect"]
     if abs(bmp_check - 0.273062367445176) > 1e-9:
@@ -163,7 +192,6 @@ def _figure(effects):
 
 
 def _print(effects, primary):
-    case = primary.group.eq("EOPE+FGR")
     print(effects.to_string(index=False, float_format=lambda v: f"{v:.4f}"))
     print("correlations within 12")
     for column in ("endothelial", "syncytiotrophoblast", "perivascular", "ga_delivery_weeks"):
@@ -175,4 +203,5 @@ def _print(effects, primary):
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
+    FIGURES.mkdir(parents=True, exist_ok=True)
     main()
