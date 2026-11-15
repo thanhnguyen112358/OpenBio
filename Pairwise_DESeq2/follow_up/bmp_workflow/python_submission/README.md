@@ -17,6 +17,14 @@ python notebooks/run.py --data openbio-datathon-2026/track-01/data --cache cache
 
 If the organizer data are already available, point `--data` to that Track 1 data directory. The output directory must be fresh or empty. The workflow retrieves checksum-pinned GEO, Ensembl 75, and MSigDB Reactome inputs. With `--piekos`, it also retrieves the pinned Piekos count and metadata releases. The audited organizer donor table and the manual browser observations are bundled in `notebooks/`. All figures are drawn from analysis tables. Paths in the archived run manifest are relative to the OpenBio repository root. [Versions and source hashes from the executed run](run_manifest.tsv)
 
+The marker-RNA adjustment uses the published OpenBio size factors and the same 27-gene score. From this folder, with the organizer Track 1 counts available at the repository root:
+
+```sh
+python notebooks/composition.py
+```
+
+It writes `results/composition_effects.csv`, `results/composition_donor_scores.csv` and `figures/composition.png`. Endothelium is PECAM1, VWF, CDH5 and CLDN5. Syncytiotrophoblast is CGA, ERVW-1 and PSG1. Adjusted intervals are HC3.
+
 The fixed pregnancy score uses the median of log count ratios for normalization. The count models use PyDESeq2, including the sex-adjusted OpenBio full and age-overlap fits and the group-only Awamleh fit. GSEApy runs adaptive multilevel enrichment with Benjamini–Hochberg adjustment across the three pathways per fit. The two implementations agree on the pregnancy scores and intervals and can give slightly different rank backgrounds, enrichment, and gene-level p-values. If you have the original R results, add `--reference PATH_TO_R_RESULTS` to compare the outputs. The Python workflow requires Python packages only.
 
 The article and local presentation draft use the same Python-rendered headline figure. Every team member must appear or speak in the final recording. Upload the team recording as **Unlisted** and add the signed-out-accessible link here. [Organizer submission instructions](https://github.com/Harvard-Undergraduate-OpenBio/openbio-datathon-2026/blob/fb751e91fb1eca4fb26a9658ad9d5042c382c4ba/submissions/README.md)
