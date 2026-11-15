@@ -1,0 +1,8 @@
+pydeseq2==0.5.4
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+anndata==0.13.4
+scikit-learn==1.9.1
+formulaic==1.2.2
+formulaic-contrasts==1.0.0

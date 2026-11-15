@@ -1,0 +1,26 @@
+"cohort","comparison","group","n","n_age_available","min_weeks","median_weeks","max_weeks"
+"Awamleh","awamleh_all_villous","EOPE",20,0,,,
+"Awamleh","awamleh_eope_vs_fgr","EOPE",20,0,,,
+"OpenBio","openbio_all_villous","EOPE",8,8,26,30.2855,33
+"Awamleh","awamleh_all_villous","EOPE+FGR",20,0,,,
+"Awamleh","awamleh_primary","EOPE+FGR",20,0,,,
+"OpenBio","openbio_all_villous","EOPE+FGR",7,7,26.571,33,33.714
+"OpenBio","openbio_overlap","EOPE+FGR",2,2,27,27.357,27.714
+"OpenBio","openbio_primary","EOPE+FGR",7,7,26.571,33,33.714
+"OpenBio","openbio_without_S04","EOPE+FGR",7,7,26.571,33,33.714
+"OpenBio","openbio_without_S04_S15","EOPE+FGR",7,7,26.571,33,33.714
+"OpenBio","openbio_without_S15","EOPE+FGR",7,7,26.571,33,33.714
+"Awamleh","awamleh_all_villous","FGR",18,0,,,
+"Awamleh","awamleh_eope_vs_fgr","FGR",18,0,,,
+"Awamleh","awamleh_fgr_vs_control","FGR",18,0,,,
+"Awamleh","awamleh_primary","FGR",18,0,,,
+"OpenBio","openbio_all_villous","FGR",5,5,26.714,29,30.429
+"OpenBio","openbio_overlap","FGR",5,5,26.714,29,30.429
+"OpenBio","openbio_primary","FGR",5,5,26.714,29,30.429
+"OpenBio","openbio_without_S04","FGR",4,4,26.714,29,30.143
+"OpenBio","openbio_without_S04_S15","FGR",3,3,29,29,30.143
+"OpenBio","openbio_without_S15","FGR",4,4,29,29.5715,30.429
+"Awamleh","awamleh_all_villous","Preterm control",21,0,,,
+"Awamleh","awamleh_fgr_vs_control","Preterm control",21,0,,,
+"OpenBio","openbio_all_villous","TB",5,5,39,39.143,39.429
+"OpenBio","openbio_all_villous","iPTB",5,5,29.857,32,33

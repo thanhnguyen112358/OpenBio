@@ -1,0 +1,102 @@
+{
+  "nguyen_revision": "7826b8d4a146a8d888269b51fd7fbf7039de502f",
+  "python": "3.12.5",
+  "packages": {
+    "pydeseq2": "0.5.4",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "anndata": "0.13.4"
+  },
+  "size_factors": "Median-of-ratios, 13 complete pairs per tissue, fixed across fits",
+  "normalization_donors": [
+    "S04",
+    "S06",
+    "S07",
+    "S08",
+    "S11",
+    "S14",
+    "S15",
+    "S16",
+    "S18",
+    "S19",
+    "S20",
+    "S21",
+    "S22"
+  ],
+  "n_cpus": 6,
+  "tissue_design": "~ group",
+  "paired_design": "~ donor_id + is_decidua + eope_in_decidua",
+  "cohorts": {
+    "inferred_same_round": {
+      "group_sizes": {
+        "FGR": 5,
+        "EOPE": 4
+      },
+      "donor_ids": [
+        "S04",
+        "S06",
+        "S07",
+        "S08",
+        "S11",
+        "S14",
+        "S15",
+        "S18",
+        "S19"
+      ]
+    },
+    "same_round_in_full_cohort_age_overlap": {
+      "group_sizes": {
+        "FGR": 5,
+        "EOPE": 3
+      },
+      "donor_ids": [
+        "S04",
+        "S06",
+        "S08",
+        "S11",
+        "S14",
+        "S15",
+        "S18",
+        "S19"
+      ]
+    },
+    "same_round_in_within_round_age_overlap": {
+      "group_sizes": {
+        "FGR": 4,
+        "EOPE": 3
+      },
+      "donor_ids": [
+        "S04",
+        "S06",
+        "S08",
+        "S11",
+        "S14",
+        "S18",
+        "S19"
+      ]
+    },
+    "all_eope_fgr_pairs": {
+      "group_sizes": {
+        "EOPE": 8,
+        "FGR": 5
+      },
+      "donor_ids": [
+        "S04",
+        "S06",
+        "S07",
+        "S08",
+        "S11",
+        "S14",
+        "S15",
+        "S16",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22"
+      ]
+    }
+  }
+}
