@@ -1,5 +1,0 @@
-cohort,eope_n,fgr_n,age_filter_min_weeks,age_filter_max_weeks,eope_donor_ids,fgr_donor_ids
-all_eope_fgr_pairs,8,5,,,S06 S07 S16 S18 S19 S20 S21 S22,S04 S08 S11 S14 S15
-inferred_same_round,4,5,,,S06 S07 S18 S19,S04 S08 S11 S14 S15
-same_round_in_full_cohort_age_overlap,3,5,26.714,30.429,S06 S18 S19,S04 S08 S11 S14 S15
-same_round_in_within_round_age_overlap,3,4,27.714,30.429,S06 S18 S19,S04 S08 S11 S14
